@@ -6,71 +6,62 @@
     <title>G.R ELECTROMATICS</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            margin: 0; /* Remove default margin */
-            font-family: Arial, sans-serif; /* Set a default font */
-        }
-
-        header {
-            background-color: #333; /* Dark background for header */
-            color: white; /* White text for header */
-            padding: 1em; /* Padding for header */
-            display: flex; /* Use flexbox for layout */
-            justify-content: space-between; /* Space between logo and nav */
-            align-items: center; /* Center items vertically */
-        }
-
-        nav ul {
-            list-style: none; /* Remove bullets from list */
-            display: flex; /* Use flexbox for horizontal layout */
-            gap: 1em; /* Space between menu items */
-        }
-
-        nav a {
-            color: white; /* White text for nav links */
-            text-decoration: none; /* Remove underline from links */
-        }
-
+        /* Added CSS for the new sections */
         .hero {
-            background-image: url('https://grelectromatics.github.io/grelectromatics/solar.jpg');
-            background-size: cover; /* Cover entire section with image */
-            background-position: center; /* Center the image */
-            height: 100vh; /* Full viewport height */
-            display: flex; /* Use flexbox for centering content */
-            align-items: center; /* Center content vertically */
-            justify-content: center; /* Center content horizontally */
-            position: relative; /* Establish positioning context */
+            background-image: url('solar.jpg'); /* Background image for hero section */
+            background-size: cover; 
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
         }
 
-        .hero-content {
-            color: white; /* Text color */
-            text-align: center; /* Center text */
-            padding: 20px; /* Add padding for spacing */
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            border-radius: 10px; /* Rounded corners */
+        .catalogue {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
         }
 
-        .features {
-            display: flex; /* Use flexbox for layout */
-            justify-content: space-around; /* Space between feature boxes */
-            padding: 2em; /* Add padding */
-            background-color: #f9f9f9; /* Light background for features */
+        .catalogue-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 30%;
+            text-align: center;
         }
 
-        .feature-box {
-            background: #fff; /* White background for boxes */
-            padding: 1em; /* Padding for boxes */
-            border-radius: 8px; /* Rounded corners */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            width: 30%; /* Fixed width for feature boxes */
-            text-align: center; /* Center text */
+        .about-us {
+            padding: 20px;
+            text-align: center;
         }
 
-        footer {
-            text-align: center; /* Center footer text */
-            padding: 1em; /* Padding for footer */
-            background-color: #333; /* Dark background for footer */
-            color: white; /* White text for footer */
+        .team-images {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .team-images img {
+            width: 150px; /* Adjust width as needed */
+            height: 150px; /* Adjust height as needed */
+            border-radius: 50%; /* Circular images */
+        }
+
+        .newsletter, .contact {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .floating-chat {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -89,26 +80,56 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>SOLAR CHARGER CONTROLLER</h1>
-            <p>Unlock the full potential of solar energy! Our advanced solar charger controllers optimize energy flow, ensuring your batteries charge efficiently and last longer. Say goodbye to wasted power and hello to sustainable living—empower your devices with smart, reliable energy solutions that protect your investments and the planet. Join the solar revolution today and make a difference with every charge!</p>
+            <h1>Welcome to G.R ELECTROMATICS</h1>
+            <p>Your trusted partner in electronics and technology</p>
             <a href="#" class="cta-btn">Learn More</a>
         </div>
     </section>
 
-    <section class="features">
-        <div class="feature-box">
-            <h2>Our Expertise</h2>
-            <p>Providing high-quality services in electromagnetics.</p>
+    <section class="catalogue">
+        <h2>Our Catalogue</h2>
+        <div class="catalogue-item">
+            <h3>Product 1</h3>
+            <img src="#" alt="Product Image" />
+            <p>Description of Product 1</p>
         </div>
-        <div class="feature-box">
-            <h2>Innovative Solutions</h2>
-            <p>Creating solutions for modern technology needs.</p>
+        <div class="catalogue-item">
+            <h3>Product 2</h3>
+            <img src="#" alt="Product Image" />
+            <p>Description of Product 2</p>
         </div>
-        <div class="feature-box">
-            <h2>Cutting Edge Technology</h2>
-            <p>Using the latest advancements in electromatics.</p>
+        <div class="catalogue-item">
+            <h3>Product 3</h3>
+            <img src="#" alt="Product Image" />
+            <p>Description of Product 3</p>
         </div>
     </section>
+
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>We are a dedicated team committed to providing the best solutions in the field of electromagnetics.</p>
+        <div class="team-images">
+            <img src="#" alt="Team Member 1" />
+            <img src="#" alt="Team Member 2" />
+            <img src="#" alt="Team Member 3" />
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h2>Monthly Newsletter</h2>
+        <p>Subscribe to our newsletter for the latest updates and offers!</p>
+        <input type="email" placeholder="Your Email" />
+        <button>Subscribe</button>
+    </section>
+
+    <section class="contact">
+        <h2>Get in Touch</h2>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: contact@grelectromatics.com</p>
+        <p>Address: 1234 Main St, Your City, Your State</p>
+    </section>
+
+    <button class="floating-chat" onclick="alert('Let\'s Chat!')">💬</button>
 
     <footer>
         <p>&copy; 2024 G.R ELECTROMATICS. All Rights Reserved.</p>
