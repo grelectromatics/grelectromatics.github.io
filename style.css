@@ -12,28 +12,48 @@ body {
     color: #333;
 }
 
-/* Header styling */
-header {
-    background-color: #222;
-    color: white;
-    padding: 1rem 0;
+/* Top Bar Styling */
+.top-bar {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
+    position: fixed; /* Fixed at the top */
+    width: 100%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it stays above other elements */
 }
 
-header .logo {
-    font-size: 1.8rem;
+.company-name {
+    font-size: 1.5rem;
     font-weight: bold;
-    padding-left: 2rem;
+}
+
+.icon-container {
+    display: flex;
+    gap: 15px; /* Space between icons */
+}
+
+.nav-icon {
+    width: 24px; /* Size of icons */
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Header styling */
+header {
+    margin-top: 60px; /* Space for the top bar */
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
     gap: 1.5rem;
-    padding-right: 2rem;
 }
 
 header nav ul li {
@@ -153,57 +173,47 @@ header nav ul li a:hover {
 /* About Us Section */
 .about {
     padding: 2rem;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
 }
 
 .about-content {
-    margin-bottom: 1rem;
-}
-
-.about-images-placeholder {
-    height: 200px;
-    background-color: #eaeaea;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: #666;
 }
 
 /* Newsletter Section */
 .newsletter {
     padding: 2rem;
     background-color: #fff;
+    text-align: center;
 }
 
 .newsletter form {
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    gap: 10px;
 }
 
 .newsletter input[type="email"] {
     padding: 0.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 5px;
 }
 
 .newsletter button {
     padding: 0.5rem 1rem;
     background-color: #f39c12;
-    color: white;
     border: none;
+    color: white;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.newsletter button:hover {
-    background-color: #d35400;
 }
 
 /* Contact Section */
 .contact {
     padding: 2rem;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
 }
 
 /* Chat Button Styling */
