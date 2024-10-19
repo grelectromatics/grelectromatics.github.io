@@ -21,12 +21,20 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Makes the header sticky */
+    top: 0;
+    z-index: 1000; /* Ensures header stays above other elements */
 }
 
 header .logo {
     font-size: 1.8rem;
     font-weight: bold;
     padding-left: 2rem;
+    transition: color 0.3s; /* Transition effect for hover */
+}
+
+header .logo:hover {
+    color: #f39c12; /* Logo hover effect */
 }
 
 header nav ul {
@@ -44,10 +52,23 @@ header nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
+    position: relative; /* For underline effect */
 }
 
-header nav ul li a:hover {
-    color: #f39c12;
+header nav ul li a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #f39c12;
+    transition: width 0.3s; /* Animation effect */
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+header nav ul li a:hover::after {
+    width: 100%; /* Underline effect on hover */
 }
 
 /* Hero section */
@@ -60,6 +81,7 @@ header nav ul li a:hover {
     text-align: center;
     color: white;
     position: relative;
+    overflow: hidden; /* Prevents overflow from child elements */
 }
 
 .hero::before {
@@ -79,6 +101,7 @@ header nav ul li a:hover {
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for depth */
 }
 
 .hero p {
@@ -93,40 +116,128 @@ header nav ul li a:hover {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Button shadow for depth */
 }
 
 .cta-btn:hover {
     background-color: #d35400;
 }
 
-/* Features section */
-.features {
+/* Catalogue section */
+.catalogue {
     display: flex;
     justify-content: space-around;
     margin: 2rem 0;
     padding: 2rem;
     background-color: #fff;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
-.feature-box {
+.catalogue-item {
     text-align: center;
     padding: 1rem;
     border: 1px solid #ddd;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px; /* Rounded corners */
     transition: transform 0.3s ease;
+    width: 30%; /* Adjust width for responsiveness */
 }
 
-.feature-box:hover {
-    transform: translateY(-10px);
+.catalogue-item:hover {
+    transform: translateY(-10px); /* Lift effect */
 }
 
-.feature-box h2 {
-    margin-bottom: 1rem;
-    color: #333;
+.catalogue-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
 }
 
-.feature-box p {
-    color: #666;
+/* About Us section */
+.about-us {
+    background: #007BFF;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px; /* Rounded corners */
+}
+
+.team-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.team-images img {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    margin: 0 10px;
+    border: 3px solid #fff;
+    transition: transform 0.3s; /* Image hover effect */
+}
+
+.team-images img:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+/* Newsletter section */
+.newsletter {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Light background */
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    padding: 10px 15px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.newsletter button:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+
+/* Contact section */
+.contact {
+    padding: 20px;
+    text-align: center;
+}
+
+.contact p {
+    margin: 5px 0;
+}
+
+/* Floating chat button */
+.floating-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+}
+
+.floating-chat:hover {
+    background-color: #218838; /* Darker green on hover */
 }
 
 /* Footer */
@@ -135,4 +246,33 @@ footer {
     padding: 1rem;
     background-color: #222;
     color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .catalogue {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .catalogue-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .team-images {
+        flex-direction: column;
+    }
+
+    .team-images img {
+        margin-bottom: 10px;
+    }
+
+    header .logo {
+        padding-left: 1rem; /* Adjusted padding */
+    }
+
+    header nav ul {
+        padding-right: 1rem; /* Adjusted padding */
+    }
 }
