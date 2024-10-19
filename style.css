@@ -21,20 +21,12 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: sticky; /* Makes the header sticky */
-    top: 0;
-    z-index: 1000; /* Ensures header stays above other elements */
 }
 
 header .logo {
     font-size: 1.8rem;
     font-weight: bold;
     padding-left: 2rem;
-    transition: color 0.3s; /* Transition effect for hover */
-}
-
-header .logo:hover {
-    color: #f39c12; /* Logo hover effect */
 }
 
 header nav ul {
@@ -52,23 +44,10 @@ header nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
-    position: relative; /* For underline effect */
 }
 
-header nav ul li a::after {
-    content: '';
-    display: block;
-    height: 2px;
-    width: 0;
-    background: #f39c12;
-    transition: width 0.3s; /* Animation effect */
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-}
-
-header nav ul li a:hover::after {
-    width: 100%; /* Underline effect on hover */
+header nav ul li a:hover {
+    color: #f39c12;
 }
 
 /* Hero section */
@@ -81,7 +60,6 @@ header nav ul li a:hover::after {
     text-align: center;
     color: white;
     position: relative;
-    overflow: hidden; /* Prevents overflow from child elements */
 }
 
 .hero::before {
@@ -101,7 +79,6 @@ header nav ul li a:hover::after {
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for depth */
 }
 
 .hero p {
@@ -116,163 +93,184 @@ header nav ul li a:hover::after {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Button shadow for depth */
 }
 
 .cta-btn:hover {
     background-color: #d35400;
 }
 
-/* Catalogue section */
-.catalogue {
+/* Features section */
+.features {
     display: flex;
     justify-content: space-around;
     margin: 2rem 0;
     padding: 2rem;
     background-color: #fff;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
-.catalogue-item {
+.feature-box {
     text-align: center;
     padding: 1rem;
     border: 1px solid #ddd;
-    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
-    width: 30%; /* Adjust width for responsiveness */
 }
 
-.catalogue-item:hover {
-    transform: translateY(-10px); /* Lift effect */
+.feature-box:hover {
+    transform: translateY(-10px);
 }
 
-.catalogue-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px; /* Rounded corners for images */
+.feature-box h2 {
+    margin-bottom: 1rem;
+    color: #333;
 }
 
-/* About Us section */
-.about-us {
-    background: #007BFF;
-    color: white;
-    padding: 40px;
-    text-align: center;
-    border-radius: 8px; /* Rounded corners */
+.feature-box p {
+    color: #666;
 }
 
-.team-images {
+/* Catalog Section */
+.catalog {
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.product-item {
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    padding: 1rem;
+}
+
+.product-image-placeholder {
+    height: 200px;
+    background-color: #eaeaea;
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    color: #666;
 }
 
-.team-images img {
-    width: 150px; 
-    height: 150px; 
-    border-radius: 50%; 
-    margin: 0 10px;
-    border: 3px solid #fff;
-    transition: transform 0.3s; /* Image hover effect */
+/* About Us Section */
+.about {
+    padding: 2rem;
+    background-color: #f9f9f9;
 }
 
-.team-images img:hover {
-    transform: scale(1.1); /* Scale effect on hover */
+.about-content {
+    margin-bottom: 1rem;
 }
 
-/* Newsletter section */
+.about-images-placeholder {
+    height: 200px;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+}
+
+/* Newsletter Section */
 .newsletter {
-    padding: 20px;
-    text-align: center;
-    background-color: #f9f9f9; /* Light background */
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.newsletter form {
+    display: flex;
+    gap: 1rem;
 }
 
 .newsletter input[type="email"] {
-    padding: 10px;
-    width: 200px;
-    border: 1px solid #007BFF;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 .newsletter button {
-    padding: 10px 15px;
-    background: #007BFF;
-    color: #fff;
+    padding: 0.5rem 1rem;
+    background-color: #f39c12;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .newsletter button:hover {
-    background: #0056b3; /* Darker blue on hover */
+    background-color: #d35400;
 }
 
-/* Contact section */
+/* Contact Section */
 .contact {
-    padding: 20px;
-    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
 }
 
-.contact p {
-    margin: 5px 0;
-}
-
-/* Floating chat button */
-.floating-chat {
+/* Chat Button Styling */
+.chat-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #28a745; /* Green color */
-    color: white;
+    background-color: #f39c12;
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: background 0.3s;
 }
 
-.floating-chat:hover {
-    background-color: #218838; /* Darker green on hover */
+.chat-button img {
+    width: 30px;
+    height: 30px;
 }
 
-/* Footer */
+/* Chat Box Styling */
+.chat-box {
+    position: fixed;
+    bottom: 80px; /* Adjusted to sit above the chat button */
+    right: 20px;
+    width: 300px;
+    max-height: 400px; /* Limit height */
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.chat-header {
+    background-color: #f39c12;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-content {
+    padding: 10px;
+    overflow-y: auto; /* Enable scrolling */
+    flex-grow: 1; /* Take remaining space */
+    max-height: 300px; /* Limit content height */
+}
+
+.close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 footer {
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 0;
     background-color: #222;
     color: white;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .catalogue {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .catalogue-item {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-
-    .team-images {
-        flex-direction: column;
-    }
-
-    .team-images img {
-        margin-bottom: 10px;
-    }
-
-    header .logo {
-        padding-left: 1rem; /* Adjusted padding */
-    }
-
-    header nav ul {
-        padding-right: 1rem; /* Adjusted padding */
-    }
+    margin-top: 2rem;
 }
