@@ -3,31 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="path-to-your-favicon.ico" type="image/x-icon"> <!-- Add your favicon path here -->
     <title>G.R ELECTROMATICS</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script> <!-- Link to the JS file -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="company-name">G.R ELECTROMATICS</div>
-        <div class="icon-container">
-            <img src="home-icon.png" alt="Home" class="nav-icon" />
-            <img src="shop-icon.png" alt="Shop" class="nav-icon" />
-            <img src="cart-icon.png" alt="Cart" class="nav-icon" />
-        </div>
-    </div>
-
     <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="top-bar">
+            <div class="logo">G.R ELECTROMATICS</div>
+            <div class="top-icons">
+                <a href="#"><img src="home-icon.png" alt="Home"></a>
+                <a href="#"><img src="shop-icon.png" alt="Shop"></a>
+                <a href="#"><img src="cart-icon.png" alt="Cart"></a>
+            </div>
+        </div>
     </header>
 
     <section class="hero">
@@ -38,77 +27,70 @@
         </div>
     </section>
 
-    <section class="features">
-        <div class="feature-box">
-            <h2>Our Expertise</h2>
-            <p>Providing high-quality services in electromagnetics.</p>
-        </div>
-        <div class="feature-box">
-            <h2>Innovative Solutions</h2>
-            <p>Creating solutions for modern technology needs.</p>
-        </div>
-        <div class="feature-box">
-            <h2>Cutting Edge Technology</h2>
-            <p>Using the latest advancements in electromatics.</p>
+    <section class="catalogue">
+        <h2>Catalogue</h2>
+        <div class="catalogue-container">
+            <div class="catalogue-item">
+                <img src="product1.jpg" alt="Product 1">
+                <p>Product 1</p>
+            </div>
+            <div class="catalogue-item">
+                <img src="product2.jpg" alt="Product 2">
+                <p>Product 2</p>
+            </div>
+            <div class="catalogue-item">
+                <img src="product3.jpg" alt="Product 3">
+                <p>Product 3</p>
+            </div>
+            <!-- Add more products as needed -->
         </div>
     </section>
 
-    <!-- Catalog Section -->
-    <section class="catalog">
-        <h2>Our Products</h2>
-        <div class="product-item">
-            <h3>Solar Charger Controller</h3>
-            <p>Unlock the full potential of solar energy! Our advanced solar charger controllers optimize energy flow, ensuring your batteries charge efficiently and last longer. Say goodbye to wasted power and hello to sustainable living—empower your devices with smart, reliable energy solutions that protect your investments and the planet. Join the solar revolution today and make a difference with every charge!</p>
-            <div class="product-image-placeholder">[Image Placeholder]</div>
-        </div>
-        <!-- You can add more product items here -->
-    </section>
-
-    <!-- About Us Section -->
     <section class="about">
-        <h2>About Us</h2>
         <div class="about-content">
-            <p>We are a dedicated team committed to providing innovative solutions in electromagnetics and technology. Our mission is to empower our clients with the tools and knowledge they need to succeed in an ever-evolving landscape.</p>
-            <div class="about-images-placeholder">[Images of the team]</div>
+            <h2>About Us</h2>
+            <p>Learn more about our mission and values.</p>
+            <p>We are dedicated to providing top-notch products and services.</p>
+        </div>
+        <div class="team-images">
+            <!-- Placeholder for team images -->
+            <img src="team1.jpg" alt="Team Member 1">
+            <img src="team2.jpg" alt="Team Member 2">
+            <img src="team3.jpg" alt="Team Member 3">
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter">
-        <h2>Subscribe to Our Monthly Newsletter</h2>
-        <form>
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit">Subscribe</button>
-        </form>
-    </section>
-
-    <!-- Contact Information -->
-    <section class="contact">
-        <h2>Get in Touch</h2>
-        <p>Phone: (123) 456-7890</p>
-        <p>Email: info@grelectromatics.com</p>
-        <p>Address: 1234 Technology Way, Silicon Valley, CA</p>
-    </section>
-
-    <!-- Chat Button -->
-    <button id="chat-button" class="chat-button">
-        <img src="chat-icon.png" alt="Chat" />
-    </button>
-
-    <!-- Chat Box -->
-    <div id="chat-box" class="chat-box">
-        <div class="chat-header">
-            <h3>Chat with Us!</h3>
-            <button id="close-chat" class="close-chat">X</button>
+    <section class="contact-newsletter">
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Phone: +123456789</p>
+            <p>Address: 123 Main St, City, Country</p>
+            <div class="social-icons">
+                <a href="#"><img src="fb-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="insta-icon.png" alt="Instagram"></a>
+            </div>
         </div>
-        <div class="chat-content">
-            <p>How can we help you today?</p>
-            <!-- You can add more chat content here -->
+        <div class="newsletter">
+            <h2>Monthly Newsletter</h2>
+            <p>Subscribe to stay updated!</p>
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
         </div>
-    </div>
+    </section>
 
     <footer>
         <p>&copy; 2024 G.R ELECTROMATICS. All Rights Reserved.</p>
     </footer>
+
+    <button class="chat-button"><img src="chat-icon.png" alt="Chat"></button>
+
+    <div class="chat-box">
+        <h3>Chat with us!</h3>
+        <div class="chat-content">
+            <!-- Chat messages go here -->
+        </div>
+        <input type="text" placeholder="Type your message...">
+        <button>Send</button>
+    </div>
 </body>
 </html>
