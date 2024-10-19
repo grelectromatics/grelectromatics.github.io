@@ -5,226 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>G.R ELECTROMATICS</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Reset CSS */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header {
-            background: #007BFF; /* Header color */
-            color: #fff;
-            padding: 15px 20px;
-            text-align: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        nav ul {
-            list-style: none;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        .hero {
-            background-image: url('solar.jpg');
-            background-size: cover; 
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-            position: relative;
-        }
-
-        .hero h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            animation: fadeIn 2s;
-        }
-
-        .hero p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            animation: fadeIn 3s;
-        }
-
-        .cta-btn {
-            padding: 10px 20px;
-            background: #fff;
-            color: #007BFF;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .cta-btn:hover {
-            background: #007BFF;
-            color: #fff;
-        }
-
-        .catalogue {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px;
-            margin: 20px 0;
-        }
-
-        .catalogue-item {
-            background: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 15px;
-            width: 30%;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .catalogue-item:hover {
-            transform: scale(1.05);
-        }
-
-        .catalogue-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        .about-us {
-            background: #007BFF;
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
-
-        .team-images {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .team-images img {
-            width: 150px; 
-            height: 150px; 
-            border-radius: 50%; 
-            margin: 0 10px;
-            border: 3px solid #fff;
-            transition: transform 0.3s;
-        }
-
-        .team-images img:hover {
-            transform: scale(1.1);
-        }
-
-        .newsletter, .contact {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .newsletter input[type="email"] {
-            padding: 10px;
-            width: 200px;
-            border: 1px solid #007BFF;
-            border-radius: 5px;
-        }
-
-        .newsletter button {
-            padding: 10px 15px;
-            background: #007BFF;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .newsletter button:hover {
-            background: #0056b3;
-        }
-
-        .contact p {
-            margin: 5px 0;
-        }
-
-        .floating-chat {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transition: background 0.3s;
-        }
-
-        .floating-chat:hover {
-            background-color: #218838;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #007BFF;
-            color: white;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
-            .catalogue {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .catalogue-item {
-                width: 80%;
-                margin-bottom: 20px;
-            }
-
-            .team-images {
-                flex-direction: column;
-            }
-
-            .team-images img {
-                margin-bottom: 10px;
-            }
-        }
-    </style>
+    <script src="script.js" defer></script> <!-- Link to the JS file -->
 </head>
 <body>
     <header>
@@ -243,54 +24,78 @@
         <div class="hero-content">
             <h1>Welcome to G.R ELECTROMATICS</h1>
             <p>Your trusted partner in electronics and technology</p>
-            <button class="cta-btn">Learn More</button>
+            <a href="#" class="cta-btn">Learn More</a>
         </div>
     </section>
 
-    <section class="catalogue">
-        <h2>Our Catalogue</h2>
-        <div class="catalogue-item">
-            <h3>Product 1</h3>
-            <img src="#" alt="Product Image" />
-            <p>Description of Product 1</p>
+    <section class="features">
+        <div class="feature-box">
+            <h2>Our Expertise</h2>
+            <p>Providing high-quality services in electromagnetics.</p>
         </div>
-        <div class="catalogue-item">
-            <h3>Product 2</h3>
-            <img src="#" alt="Product Image" />
-            <p>Description of Product 2</p>
+        <div class="feature-box">
+            <h2>Innovative Solutions</h2>
+            <p>Creating solutions for modern technology needs.</p>
         </div>
-        <div class="catalogue-item">
-            <h3>Product 3</h3>
-            <img src="#" alt="Product Image" />
-            <p>Description of Product 3</p>
+        <div class="feature-box">
+            <h2>Cutting Edge Technology</h2>
+            <p>Using the latest advancements in electromatics.</p>
         </div>
     </section>
 
-    <section class="about-us">
+    <!-- Catalog Section -->
+    <section class="catalog">
+        <h2>Our Products</h2>
+        <div class="product-item">
+            <h3>Solar Charger Controller</h3>
+            <p>Unlock the full potential of solar energy! Our advanced solar charger controllers optimize energy flow, ensuring your batteries charge efficiently and last longer. Say goodbye to wasted power and hello to sustainable living—empower your devices with smart, reliable energy solutions that protect your investments and the planet. Join the solar revolution today and make a difference with every charge!</p>
+            <div class="product-image-placeholder">[Image Placeholder]</div>
+        </div>
+        <!-- You can add more product items here -->
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about">
         <h2>About Us</h2>
-        <p>We are a dedicated team committed to providing the best solutions in the field of electromagnetics.</p>
-        <div class="team-images">
-            <img src="#" alt="Team Member 1" />
-            <img src="#" alt="Team Member 2" />
-            <img src="#" alt="Team Member 3" />
+        <div class="about-content">
+            <p>We are a dedicated team committed to providing innovative solutions in electromagnetics and technology. Our mission is to empower our clients with the tools and knowledge they need to succeed in an ever-evolving landscape.</p>
+            <div class="about-images-placeholder">[Images of the team]</div>
         </div>
     </section>
 
+    <!-- Newsletter Section -->
     <section class="newsletter">
-        <h2>Monthly Newsletter</h2>
-        <p>Subscribe to our newsletter for the latest updates and offers!</p>
-        <input type="email" placeholder="Your Email" />
-        <button>Subscribe</button>
+        <h2>Subscribe to Our Monthly Newsletter</h2>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
     </section>
 
+    <!-- Contact Information -->
     <section class="contact">
         <h2>Get in Touch</h2>
         <p>Phone: (123) 456-7890</p>
-        <p>Email: contact@grelectromatics.com</p>
-        <p>Address: 1234 Main St, Your City, Your State</p>
+        <p>Email: info@grelectromatics.com</p>
+        <p>Address: 1234 Technology Way, Silicon Valley, CA</p>
     </section>
 
-    <button class="floating-chat" onclick="alert('Let\'s Chat!')">💬</button>
+    <!-- Chat Button -->
+    <button id="chat-button" class="chat-button">
+        <img src="chat-icon.png" alt="Chat" />
+    </button>
+
+    <!-- Chat Box -->
+    <div id="chat-box" class="chat-box">
+        <div class="chat-header">
+            <h3>Chat with Us!</h3>
+            <button id="close-chat" class="close-chat">X</button>
+        </div>
+        <div class="chat-content">
+            <p>How can we help you today?</p>
+            <!-- You can add more chat content here -->
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 G.R ELECTROMATICS. All Rights Reserved.</p>
