@@ -14,7 +14,7 @@ body {
 
 /* Top Bar styling with Blue and Purple Gradient */
 .top-bar {
-    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Blue and Purple Gradient */
+    background: linear-gradient(135deg, #6EC1E4, #B28DFF); /* Blue and Purple Gradient */
     display: flex;
     justify-content: space-between;
     align-items: center;
