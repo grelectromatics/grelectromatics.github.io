@@ -27,18 +27,19 @@ header {
     z-index: 10;
 }
 
-.top-bar .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.top-bar .logo img {
+    max-height: 40px; /* Adjust the size of the logo */
+    width: auto;
 }
 
 .top-icons a {
     margin-left: 1rem;
 }
 
+.top-icons img {
+    width: 24px;
+    height: 24px;
+}
 .top-icons img {
     width: 24px;
     height: 24px;
