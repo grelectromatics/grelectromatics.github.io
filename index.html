@@ -4,94 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>G.R ELECTROMATICS</title>
-    <link rel="stylesheet" href="style.css"> <!-- Make sure to link the CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Add your favicon path -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Font Awesome Icons -->
 </head>
 <body>
-
-    <!-- Top Bar with Logo and Icons -->
+    <!-- Top Navigation Bar -->
     <div class="top-bar">
         <div class="logo">
             <img src="your-logo-url.png" alt="Logo"> <!-- Replace with your logo path -->
         </div>
         <ul>
-            <li><a href="#" class="home">Home</a></li>
-            <li><a href="#" class="shop">Shop</a></li>
-            <li><a href="#" class="cart">Cart</a></li>
+            <li><a href="#home" class="home"><i class="fas fa-home"></i></a></li>
+            <li><a href="#shop" class="shop"><i class="fas fa-store"></i></a></li>
+            <li><a href="#cart" class="cart"><i class="fas fa-shopping-cart"></i></a></li>
         </ul>
     </div>
 
-    <!-- Content of the page (You can add more sections here) -->
-
-</body>
-</html>
-
-
-
-    <!-- Hero Section with Background Image -->
-    <section class="hero">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
         <div class="hero-content">
             <h1>Welcome to G.R ELECTROMATICS</h1>
-            <p>Your trusted partner in electronics and technology</p>
-            <a href="#" class="cta-btn">Learn More</a>
+            <p>Innovating Tomorrow, Today.</p>
+            <a href="#shop" class="cta-btn">Explore Products</a>
         </div>
     </section>
 
-    <!-- Catalogue Section -->
-    <section class="catalogue">
-        <h2>Catalogue</h2>
-        <div class="catalogue-items">
-            <!-- Example Product Images, Replace with Actual Image Links -->
-            <div class="product-item">
-                <img src="product1.jpg" alt="Product 1">
-                <h3>Product 1</h3>
+    <!-- Catalog Section -->
+    <section id="shop" class="catalog">
+        <h2>Our Catalogue</h2>
+        <div class="product-gallery">
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1"> <!-- Replace with your product image paths -->
+                <p>Product Name 1</p>
             </div>
-            <div class="product-item">
+            <div class="product">
                 <img src="product2.jpg" alt="Product 2">
-                <h3>Product 2</h3>
+                <p>Product Name 2</p>
             </div>
-            <div class="product-item">
+            <div class="product">
                 <img src="product3.jpg" alt="Product 3">
-                <h3>Product 3</h3>
+                <p>Product Name 3</p>
             </div>
         </div>
     </section>
 
     <!-- About Us Section -->
-    <section class="about-us">
-        <div class="about-us-content">
-            <h2>About Us</h2>
-            <p>We are committed to delivering innovative solutions in electronics and electromagnetics.</p>
-        </div>
-        <div class="workers-images">
-            <!-- Replace with images of your workers -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>At G.R ELECTROMATICS, we strive to deliver top-notch tech solutions. Our team of innovators works passionately to turn ideas into reality.</p>
+        <div class="team">
             <img src="worker1.jpg" alt="Worker 1">
             <img src="worker2.jpg" alt="Worker 2">
+            <img src="worker3.jpg" alt="Worker 3">
         </div>
     </section>
 
-    <!-- Get in Touch & Newsletter Section -->
-    <section class="contact-newsletter">
-        <div class="contact-info">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="left">
             <h3>Get in Touch</h3>
-            <p>Phone: +123 456 7890</p>
-            <p>Address: 123 Tech Avenue</p>
+            <p>Phone: +123 456 789</p>
+            <p>Address: 123 Tech Street, Innovation City</p>
             <div class="social-icons">
-                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
-        <div class="newsletter">
-            <h3>Subscribe to Our Monthly Newsletter</h3>
-            <p>Stay updated with the latest products and news</p>
-            <form action="#">
-                <input type="email" placeholder="Enter your email" required>
+        <div class="right">
+            <h3>Monthly Newsletter</h3>
+            <form>
+                <input type="email" placeholder="Enter your email">
                 <button type="submit">Subscribe</button>
             </form>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 G.R ELECTROMATICS. All Rights Reserved.</p>
-    </footer>
+    <!-- Chat Icon -->
+    <div class="chat-icon">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+
+    <script src="script.js"></script> <!-- Link JS for chat functionality -->
 </body>
 </html>
