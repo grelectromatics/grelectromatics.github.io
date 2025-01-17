@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    overflow-x: hidden;
 }
 
 /* Top bar */
@@ -17,13 +18,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Vibrant gradient */
-    padding: 10px 20px;
+    background: linear-gradient(45deg, #3f87a6, #ebf8e1); /* Light gradient */
+    padding: 15px 40px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 10;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.5s ease;
 }
 
 .top-bar .logo img {
@@ -59,6 +61,7 @@ body {
     text-align: center;
     color: white;
     position: relative;
+    transition: opacity 0.3s ease;
 }
 
 .hero::before {
@@ -73,12 +76,12 @@ body {
 
 .hero-content {
     z-index: 2;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    animation: fadeIn 2s ease-in-out;
 }
 
 .hero p {
@@ -105,6 +108,7 @@ body {
     background: white;
     padding: 4rem 2rem;
     text-align: center;
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
 .catalog h2 {
@@ -134,6 +138,7 @@ body {
     padding: 4rem 2rem;
     color: white;
     text-align: center;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .about .team img {
@@ -146,6 +151,7 @@ body {
 .contact {
     display: flex;
     padding: 4rem 2rem;
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
 .contact .left, .contact .right {
@@ -180,17 +186,18 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #6a11cb;
+    background-color: #3f87a6;
     color: white;
     font-size: 2rem;
     padding: 15px;
     border-radius: 50%;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .chat-icon:hover {
     transform: scale(1.2);
+    background-color: #2575fc;
 }
 
 /* Animations */
@@ -200,5 +207,16 @@ body {
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
