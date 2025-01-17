@@ -4,10 +4,7 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
-}
-
-h2, h1 {
-    text-align: center;
+    background-color: #f0f0f0;
 }
 
 /* Header Styles */
@@ -15,34 +12,40 @@ h2, h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 50px;
-    background: linear-gradient(45deg, lightblue, lightpurple);
+    padding: 20px 50px;
+    background: linear-gradient(45deg, #00b4d8, #3a7bd5);
     position: fixed;
-    width: 100%;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #logo {
     max-width: 150px;
+    height: auto;
     transition: all 0.3s ease;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 nav ul li a {
     color: white;
     font-size: 18px;
     text-decoration: none;
-    padding: 10px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px;
 }
 
 nav ul li a:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
 }
 
@@ -50,41 +53,68 @@ nav ul li a:hover {
 .section {
     padding: 100px 20px;
     text-align: center;
-    color: white;
 }
 
 .intro {
     background: url('background.jpg') no-repeat center center/cover;
     height: 600px;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intro h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
 }
 
 .catalogue {
-    background-color: #f4f4f4;
-    color: black;
+    background-color: #fff;
+    padding: 50px 20px;
+}
+
+.catalogue h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
 }
 
 .product {
     display: inline-block;
     margin: 20px;
-    padding: 10px;
     text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .product img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     transition: all 0.3s ease;
 }
 
-.product img:hover {
+.product:hover {
     transform: scale(1.1);
+}
+
+.product img:hover {
+    transform: scale(1.2);
 }
 
 .about {
     background: url('about-bg.jpg') no-repeat center center/cover;
     height: 500px;
-    padding: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about p {
+    font-size: 1.2em;
+    margin-top: 20px;
 }
 
 /* Chat Modal Styles */
@@ -101,10 +131,12 @@ nav ul li a:hover {
 }
 
 .modal-content {
-    background: white;
+    background: #fff;
     padding: 30px;
     width: 50%;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 
 .close-btn {
