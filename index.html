@@ -3,47 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Website</title>
+    <title>G.R ELECTROMATICS</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome Icons for cart and chat -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <!-- Header and Navigation -->
+    <!-- Header with Logo and Icons -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="#section1">Section 1</a></li>
-                <li><a href="#section2">Section 2</a></li>
-                <li><a href="#section3">Section 3</a></li>
-                <li><button id="openModalButton">Open Modal</button></li>
-            </ul>
-        </nav>
+        <div class="top-bar">
+            <img src="your-logo-url.png" alt="G.R ELECTROMATICS Logo" id="logo">
+            <nav>
+                <ul>
+                    <li><a href="#section1">Home</a></li>
+                    <li><a href="#section2">Shop</a></li>
+                    <li><a href="#section3">About</a></li>
+                    <li><a href="javascript:void(0);" id="chatButton">
+                        <i class="fas fa-comments"></i>
+                    </a></li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Section 1 -->
-    <div id="section1" class="section" style="background-color: lightcoral; height: 500px;">
-        <h2>Section 1</h2>
-    </div>
-
-    <!-- Section 2 -->
-    <div id="section2" class="section" style="background-color: lightblue; height: 500px;">
-        <h2>Section 2</h2>
-    </div>
-
-    <!-- Section 3 -->
-    <div id="section3" class="section" style="background-color: lightgreen; height: 500px;">
-        <h2>Section 3</h2>
-    </div>
-
-    <!-- Modal (Popup) -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span id="closeButton" class="close">&times;</span>
-            <h2>Popup Modal</h2>
-            <p>This is a simple modal. You can close it by clicking the "X" or anywhere outside the modal.</p>
+    <!-- Section 1: Intro with Background -->
+    <div id="section1" class="section intro">
+        <div class="intro-text">
+            <h1>Welcome to G.R ELECTROMATICS</h1>
+            <p>Explore our innovative electronic products and services!</p>
         </div>
     </div>
 
-    <!-- Link to JavaScript file -->
+    <!-- Section 2: Catalogue -->
+    <div id="section2" class="section catalogue">
+        <h2>Catalogue</h2>
+        <div class="product">
+            <img src="product1.jpg" alt="Product 1">
+            <p>Product 1</p>
+        </div>
+        <div class="product">
+            <img src="product2.jpg" alt="Product 2">
+            <p>Product 2</p>
+        </div>
+        <div class="product">
+            <img src="product3.jpg" alt="Product 3">
+            <p>Product 3</p>
+        </div>
+    </div>
+
+    <!-- Section 3: About Us -->
+    <div id="section3" class="section about">
+        <h2>About Us</h2>
+        <p>At G.R ELECTROMATICS, we deliver the best in electronics, ensuring top-notch quality and customer satisfaction. Our cutting-edge products are built to make your life easier!</p>
+    </div>
+
+    <!-- Chat Modal -->
+    <div id="chatModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeChatBtn">&times;</span>
+            <h3>Start a Chat</h3>
+            <p>How can we assist you today?</p>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
 </body>
 </html>
