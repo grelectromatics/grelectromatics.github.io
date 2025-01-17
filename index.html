@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,65 +9,88 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
+
 <body>
-    <!-- Header with Logo and Navigation -->
-    <header>
-        <div class="top-bar">
-            <img src="your-logo-url.png" alt="G.R ELECTROMATICS Logo" id="logo">
-            <nav>
-                <ul>
-                    <li><a href="#section1">Home</a></li>
-                    <li><a href="#section2">Shop</a></li>
-                    <li><a href="#section3">About</a></li>
-                    <li><a href="javascript:void(0);" id="chatButton">
-                        <i class="fas fa-comments"></i>
-                    </a></li>
-                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
-                </ul>
-            </nav>
-        </div>
+
+    <!-- Semi-Transparent Top Bar -->
+    <header class="top-bar">
+        <img src="your-logo-url.png" alt="G.R ELECTROMATICS Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#section1">Home</a></li>
+                <li><a href="#section2">Shop</a></li>
+                <li><a href="#section3">About</a></li>
+                <li><a href="javascript:void(0);" id="chatButton"><i class="fas fa-comments"></i></a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Section 1: Intro with Background -->
-    <div id="section1" class="section intro">
-        <div class="intro-text">
+    <section id="section1" class="intro">
+        <div class="intro-content">
             <h1>Welcome to G.R ELECTROMATICS</h1>
-            <p>Explore our innovative electronic products and services!</p>
+            <p>Your one-stop solution for all electronics!</p>
+            <a href="#section2" class="cta-btn">Explore Now</a>
         </div>
-    </div>
+    </section>
 
     <!-- Section 2: Catalogue -->
-    <div id="section2" class="section catalogue">
-        <h2>Catalogue</h2>
-        <div class="product">
-            <img src="product1.jpg" alt="Product 1">
-            <p>Product 1</p>
+    <section id="section2" class="catalogue">
+        <h2>Product Catalogue</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="product1.jpg" alt="Product 1">
+                <p>Product 1</p>
+            </div>
+            <div class="product-item">
+                <img src="product2.jpg" alt="Product 2">
+                <p>Product 2</p>
+            </div>
+            <!-- Add more products as needed -->
         </div>
-        <div class="product">
-            <img src="product2.jpg" alt="Product 2">
-            <p>Product 2</p>
-        </div>
-        <div class="product">
-            <img src="product3.jpg" alt="Product 3">
-            <p>Product 3</p>
-        </div>
-    </div>
+    </section>
 
     <!-- Section 3: About Us -->
-    <div id="section3" class="section about">
+    <section id="section3" class="about">
         <h2>About Us</h2>
-        <p>At G.R ELECTROMATICS, we deliver the best in electronics, ensuring top-notch quality and customer satisfaction. Our cutting-edge products are built to make your life easier!</p>
-    </div>
+        <p>We specialize in high-end electronics with cutting-edge technology.</p>
+        <div class="team-images">
+            <img src="worker1.jpg" alt="Worker 1">
+            <img src="worker2.jpg" alt="Worker 2">
+            <!-- Add more worker images as needed -->
+        </div>
+    </section>
 
-    <!-- Chat Modal -->
-    <div id="chatModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" id="closeChatBtn">&times;</span>
-            <h3>Start a Chat</h3>
-            <p>How can we assist you today?</p>
+    <!-- Section 4: Get In Touch and Newsletter -->
+    <section id="section4" class="contact">
+        <div class="contact-left">
+            <h2>Get in Touch</h2>
+            <p>Phone: 123-456-7890</p>
+            <p>Email: info@grelectromatics.com</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="contact-right">
+            <h2>Subscribe to Our Newsletter</h2>
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </div>
+    </section>
+
+    <!-- Chat Box Modal -->
+    <div id="chatModal" class="chat-modal">
+        <div class="chat-modal-content">
+            <span id="closeChat" class="close">&times;</span>
+            <h3>Live Chat</h3>
+            <textarea id="chatBox" placeholder="Type your message..."></textarea>
+            <button id="sendBtn">Send</button>
         </div>
     </div>
 
     <script src="js/script.js"></script>
 </body>
+
 </html>
