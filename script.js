@@ -1,32 +1,30 @@
-// Smooth Scroll for Navigation Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    });
-});
+// JavaScript for modal chat popup
+const chatButton = document.getElementById('chatButton');
+const chatModal = document.getElementById('chatModal');
+const closeChatBtn = document.getElementById('closeChatBtn');
 
-// Modal Logic
-var modal = document.getElementById("modal");
-var openModalButton = document.getElementById("openModalButton");
-var closeButton = document.getElementById("closeButton");
-
-// Open Modal
-openModalButton.onclick = function() {
-    modal.style.display = "block";
+// Open Chat Modal
+chatButton.onclick = function() {
+    chatModal.style.display = "flex";
 }
 
-// Close Modal when clicking 'X'
-closeButton.onclick = function() {
-    modal.style.display = "none";
+// Close Chat Modal
+closeChatBtn.onclick = function() {
+    chatModal.style.display = "none";
 }
 
-// Close Modal when clicking outside the modal
+// Close Chat Modal when clicked outside
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target === chatModal) {
+        chatModal.style.display = "none";
     }
+}
+
+// Hover effect on logo
+const logo = document.getElementById('logo');
+logo.onmouseover = function() {
+    logo.style.transform = 'scale(1.2)';
+}
+logo.onmouseout = function() {
+    logo.style.transform = 'scale(1)';
 }
