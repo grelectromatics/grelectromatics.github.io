@@ -3,88 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G.R ELECTROMATICS</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Replace with your favicon path -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Font Awesome Icons -->
+    <title>Interactive Website</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Top Navigation Bar -->
-    <div class="top-bar">
-        <div class="logo">
-            <img src="your-logo-url.png" alt="Logo"> <!-- Replace with your logo path -->
-        </div>
-        <ul>
-            <li><a href="#home" class="home"><i class="fas fa-home"></i></a></li>
-            <li><a href="#shop" class="shop"><i class="fas fa-store"></i></a></li>
-            <li><a href="#cart" class="cart"><i class="fas fa-shopping-cart"></i></a></li>
-        </ul>
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#section1">Section 1</a></li>
+                <li><a href="#section2">Section 2</a></li>
+                <li><a href="#section3">Section 3</a></li>
+                <li><button id="openModalButton">Open Modal</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section 1 -->
+    <div id="section1" class="section" style="background-color: lightcoral; height: 500px;">
+        <h2>Section 1</h2>
     </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Welcome to G.R ELECTROMATICS</h1>
-            <p>Innovating Tomorrow, Today.</p>
-            <a href="#shop" class="cta-btn">Explore Products</a>
-        </div>
-    </section>
-
-    <!-- Catalog Section -->
-    <section id="shop" class="catalog">
-        <h2>Our Catalogue</h2>
-        <div class="product-gallery">
-            <div class="product">
-                <img src="product1.jpg" alt="Product 1"> <!-- Replace with your product image paths -->
-                <p>Product Name 1</p>
-            </div>
-            <div class="product">
-                <img src="product2.jpg" alt="Product 2">
-                <p>Product Name 2</p>
-            </div>
-            <div class="product">
-                <img src="product3.jpg" alt="Product 3">
-                <p>Product Name 3</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Us Section -->
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>At G.R ELECTROMATICS, we strive to deliver top-notch tech solutions. Our team of innovators works passionately to turn ideas into reality.</p>
-        <div class="team">
-            <img src="worker1.jpg" alt="Worker 1">
-            <img src="worker2.jpg" alt="Worker 2">
-            <img src="worker3.jpg" alt="Worker 3">
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="left">
-            <h3>Get in Touch</h3>
-            <p>Phone: +123 456 789</p>
-            <p>Address: 123 Tech Street, Innovation City</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-        <div class="right">
-            <h3>Monthly Newsletter</h3>
-            <form>
-                <input type="email" placeholder="Enter your email">
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Chat Icon -->
-    <div class="chat-icon">
-        <i class="fas fa-comment-dots"></i>
+    <!-- Section 2 -->
+    <div id="section2" class="section" style="background-color: lightblue; height: 500px;">
+        <h2>Section 2</h2>
     </div>
 
-    <script src="script.js"></script> <!-- Link JS for chat functionality -->
+    <!-- Section 3 -->
+    <div id="section3" class="section" style="background-color: lightgreen; height: 500px;">
+        <h2>Section 3</h2>
+    </div>
+
+    <!-- Modal (Popup) -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeButton" class="close">&times;</span>
+            <h2>Popup Modal</h2>
+            <p>This is a simple modal. You can close it by clicking the "X" or anywhere outside the modal.</p>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript file -->
+    <script src="js/script.js"></script>
 </body>
 </html>
