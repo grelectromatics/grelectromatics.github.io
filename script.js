@@ -1,36 +1,44 @@
-// JavaScript for Floating Chat Box and Smooth Scroll
-
-document.addEventListener('DOMContentLoaded', function () {
-  const chatBtn = document.querySelector('.chat-icon');
-  const chatModal = document.querySelector('.chat-modal');
-  const closeBtn = document.querySelector('.close-btn');
-
-  chatBtn.addEventListener('click', () => {
-    chatModal.style.display = 'block';
-  });
-
-  closeBtn.addEventListener('click', () => {
-    chatModal.style.display = 'none';
-  });
-
-  // Smooth Scroll for navigation links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-
-  // Newsletter and Chat Form Handler (placeholder - needs backend or form service)
-  document.querySelector('.contact-right button')?.addEventListener('click', () => {
-    const email = document.querySelector('.contact-right input').value;
-    if (email) alert('Newsletter subscribed with: ' + email);
-  });
-
-  document.querySelector('.chat-box button')?.addEventListener('click', () => {
-    const message = document.querySelector('.chat-box textarea').value;
-    if (message) alert('Chat message sent: ' + message);
+// Smooth scroll for internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const section = document.querySelector(this.getAttribute('href'));
+    section?.scrollIntoView({ behavior: 'smooth' });
   });
 });
+
+// Floating chat icon toggle
+const chatBtn = document.querySelector('.chat-icon');
+const chatModal = document.querySelector('.chat-modal');
+const closeBtn = document.querySelector('.close-btn');
+
+chatBtn?.addEventListener('click', () => {
+  chatModal.style.display = 'block';
+});
+
+closeBtn?.addEventListener('click', () => {
+  chatModal.style.display = 'none';
+});
+
+// Shrink navbar on scroll
+const navbar = document.querySelector('.top-bar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    navbar.style.padding = '0.5rem 2rem';
+    navbar.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+  } else {
+    navbar.style.padding = '0.8rem 2rem';
+    navbar.style.boxShadow = '0 1px 3px rgba(0,0,0,0.05)';
+  }
+});
+
+// Scroll animation effect (basic)
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-target').forEach(el => observer.observe(el));
