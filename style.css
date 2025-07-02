@@ -32,7 +32,9 @@ body {
 .top-bar .logo {
   height: 100px;
   width: auto;
+  max-height: 100px;
 }
+
 
 .nav-menu {
   display: flex;
