@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,185 +6,171 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   background-color: #f5f5f7;
   color: #1d1d1f;
-  line-height: 1.6;
   scroll-behavior: smooth;
 }
 
-/* Top Navigation Bar */
+/* Top Bar */
 .top-bar {
   position: fixed;
-  width: 100%;
   top: 0;
-  left: 0;
-  z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: saturate(180%) blur(20px);
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 2rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  justify-content: space-between;
+  z-index: 999;
 }
 
-.top-bar .logo {
-  height: 100px;
-  width: auto;
-  max-height: 100px;
+.logo {
+  height: 40px;
 }
-
 
 .nav-menu {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .nav-btn {
   color: #1d1d1f;
-  background: none;
-  border: none;
-  font-size: 1rem;
-  font-weight: 500;
   text-decoration: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  font-weight: 500;
+  transition: 0.2s ease;
 }
 
 .nav-btn:hover {
-  opacity: 0.7;
-  transform: scale(1.05);
+  transform: scale(1.1);
+  color: #0071e3;
 }
 
 /* Hero Section */
 .intro {
-  height: 100vh;
-  background: url('solar.jpg') no-repeat center center/cover;
+  margin-top: 80px;
+  height: 90vh;
+  background: url('solar.jpg') no-repeat center center / cover;
   display: flex;
-  justify-content: center;
   align-items: center;
-  color: #fff;
+  justify-content: center;
+  color: white;
   text-align: center;
   position: relative;
-  padding-top: 4rem;
 }
 
 .intro::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .intro-content {
+  position: relative;
   z-index: 1;
-  max-width: 700px;
   padding: 1rem;
 }
 
 .intro-content h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
-  font-weight: 600;
 }
 
 .intro-content p {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
+  font-size: 1.2rem;
 }
 
 .cta-btn {
-  background-color: #0071e3;
-  padding: 0.8rem 2rem;
+  background: #0071e3;
   color: white;
+  padding: 0.75rem 1.5rem;
   text-decoration: none;
   border-radius: 8px;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: background 0.3s;
 }
 
 .cta-btn:hover {
-  background-color: #005bb5;
+  background: #005bb5;
 }
 
-/* Catalogue Section */
+/* Catalogue */
 .catalogue {
-  padding: 6rem 2rem;
-  background-color: #fff;
+  padding: 4rem 2rem;
   text-align: center;
+  background: #fff;
 }
 
 .catalogue h2 {
-  font-size: 2.4rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
 }
 
 .product-grid {
   display: flex;
-  justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .product-item {
+  width: 200px;
+  background: #f0f0f0;
   border-radius: 10px;
-  background-color: #f2f2f2;
   padding: 1rem;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
 .product-item:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
-/* About Us Section */
+.product-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* About */
 .about {
-  padding: 6rem 2rem;
   background: #f5f5f7;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
 .about h2 {
+  font-size: 2rem;
   margin-bottom: 1rem;
-  font-size: 2.4rem;
 }
 
 .about p {
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
-  color: #515154;
+  max-width: 600px;
+  margin: auto;
+  color: #444;
 }
 
-.team-images img {
-  height: 100px;
-  margin: 0 1rem;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Contact Section */
+/* Contact + Newsletter */
 .contact {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   background: #1d1d1f;
   color: white;
-  padding: 4rem 2rem;
-  flex-wrap: wrap;
+  padding: 3rem 2rem;
 }
 
 .contact-left, .contact-right {
   flex: 1;
   min-width: 300px;
-  padding: 1rem;
+  margin-bottom: 2rem;
 }
 
 .contact-left h2, .contact-right h2 {
-  margin-bottom: 1rem;
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .social-icons a {
@@ -199,25 +185,25 @@ body {
   color: #0071e3;
 }
 
-.contact-right input {
-  padding: 0.6rem;
+.contact-right input[type="email"] {
+  padding: 0.5rem;
   width: 70%;
-  border: none;
   border-radius: 5px;
-  margin-right: 0.5rem;
+  border: none;
+  margin-bottom: 1rem;
 }
 
 .contact-right button {
-  padding: 0.6rem 1rem;
-  background-color: #0071e3;
-  border: none;
+  background: #0071e3;
   color: white;
+  padding: 0.6rem 1rem;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .contact-right button:hover {
-  background-color: #005bb5;
+  background: #005bb5;
 }
 
 /* Floating Chat Icon */
@@ -225,74 +211,35 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #0071e3;
+  background: #0071e3;
   color: white;
+  padding: 14px;
   border-radius: 50%;
-  padding: 15px;
+  z-index: 1000;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  z-index: 1001;
-  transition: transform 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
 }
 
 .chat-icon:hover {
   transform: scale(1.1);
 }
 
-/* Chat Modal */
-.chat-modal {
-  display: none;
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  border-radius: 10px;
-  width: 300px;
-  padding: 1rem;
-  z-index: 1002;
-}
-
-.chat-box textarea {
-  width: 100%;
-  height: 100px;
-  border: 1px solid #ccc;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
-  resize: none;
-}
-
-.chat-box button {
-  padding: 0.5rem 1rem;
-  background-color: #0071e3;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
+/* Responsive Media Query */
+@media screen and (max-width: 768px) {
   .top-bar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
   }
 
   .nav-menu {
     flex-direction: column;
-    gap: 1rem;
     width: 100%;
     margin-top: 0.5rem;
+  }
+
+  .nav-btn {
+    padding: 0.5rem 0;
   }
 
   .intro-content h1 {
@@ -308,18 +255,12 @@ body {
     align-items: center;
   }
 
-  .team-images img {
-    height: 80px;
-    margin: 0.5rem;
+  .product-item {
+    width: 90%;
   }
 
   .contact {
     flex-direction: column;
     text-align: center;
-  }
-
-  .chat-modal {
-    right: 10px;
-    width: 90%;
   }
 }
