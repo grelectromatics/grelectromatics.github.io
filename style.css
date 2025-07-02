@@ -30,7 +30,8 @@ body {
 }
 
 .top-bar .logo {
-  height: 35px;
+  height: 60px;
+  width: auto;
 }
 
 .nav-menu {
