@@ -2,95 +2,98 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G.R ELECTROMATICS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G.R ELECTROMATICS</title>
   <link rel="stylesheet" href="style.css">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
 
 <body>
+  <!-- Top Navigation Bar -->
+  <header class="top-bar">
+    <img src="your-logo-url.png" alt="G.R ELECTROMATICS Logo" class="logo">
+    <nav class="nav-menu">
+      <a href="#section1" class="nav-btn">Home</a>
+      <a href="#section2" class="nav-btn">Shop</a>
+      <a href="#section3" class="nav-btn">About</a>
+      <a href="#section2" class="nav-btn"><i class="fas fa-shopping-cart"></i></a>
+    </nav>
+  </header>
 
-    <!-- Semi-Transparent Top Bar -->
-    <header class="top-bar">
-        <img src="your-logo-url.png" alt="G.R ELECTROMATICS Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#section1">Home</a></li>
-                <li><a href="#section2">Shop</a></li>
-                <li><a href="#section3">About</a></li>
-                <li><a href="javascript:void(0);" id="chatButton"><i class="fas fa-comments"></i></a></li>
-                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Section 1: Intro with Background -->
-    <section id="section1" class="intro">
-        <div class="intro-content">
-            <h1>Welcome to G.R ELECTROMATICS</h1>
-            <p>Your one-stop solution for all electronics!</p>
-            <a href="#section2" class="cta-btn">Explore Now</a>
-        </div>
-    </section>
-
-    <!-- Section 2: Catalogue -->
-    <section id="section2" class="catalogue">
-        <h2>Product Catalogue</h2>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="product1.jpg" alt="Product 1">
-                <p>Product 1</p>
-            </div>
-            <div class="product-item">
-                <img src="product2.jpg" alt="Product 2">
-                <p>Product 2</p>
-            </div>
-            <!-- Add more products as needed -->
-        </div>
-    </section>
-
-    <!-- Section 3: About Us -->
-    <section id="section3" class="about">
-        <h2>About Us</h2>
-        <p>We specialize in high-end electronics with cutting-edge technology.</p>
-        <div class="team-images">
-            <img src="worker1.jpg" alt="Worker 1">
-            <img src="worker2.jpg" alt="Worker 2">
-            <!-- Add more worker images as needed -->
-        </div>
-    </section>
-
-    <!-- Section 4: Get In Touch and Newsletter -->
-    <section id="section4" class="contact">
-        <div class="contact-left">
-            <h2>Get in Touch</h2>
-            <p>Phone: 123-456-7890</p>
-            <p>Email: info@grelectromatics.com</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-        <div class="contact-right">
-            <h2>Subscribe to Our Newsletter</h2>
-            <input type="email" placeholder="Enter your email">
-            <button>Subscribe</button>
-        </div>
-    </section>
-
-    <!-- Chat Box Modal -->
-    <div id="chatModal" class="chat-modal">
-        <div class="chat-modal-content">
-            <span id="closeChat" class="close">&times;</span>
-            <h3>Live Chat</h3>
-            <textarea id="chatBox" placeholder="Type your message..."></textarea>
-            <button id="sendBtn">Send</button>
-        </div>
+  <!-- Hero Section -->
+  <section id="section1" class="intro">
+    <div class="intro-content">
+      <h1>Welcome to G.R ELECTROMATICS</h1>
+      <p>Your one-stop solution for all electronics!</p>
+      <a href="#section2" class="cta-btn">Explore Now</a>
     </div>
+  </section>
 
-    <script src="js/script.js"></script>
+  <!-- Catalogue Section -->
+  <section id="section2" class="catalogue">
+    <h2>Product Catalogue</h2>
+    <div class="product-grid">
+      <div class="product-item">
+        <img src="product1.jpg" alt="Product 1">
+        <p>Product 1</p>
+      </div>
+      <div class="product-item">
+        <img src="product2.jpg" alt="Product 2">
+        <p>Product 2</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="section3" class="about">
+    <h2>About Us</h2>
+    <p>We specialize in high-end electronics with cutting-edge technology.</p>
+    <div class="team-images">
+      <img src="worker1.jpg" alt="Worker 1">
+      <img src="worker2.jpg" alt="Worker 2">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="section4" class="contact">
+    <div class="contact-left">
+      <h2>Get in Touch</h2>
+      <p>Phone: +923008860714</p>
+      <p>Email: info@grelectromatics.com</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="contact-right">
+      <h2>Subscribe to Our Newsletter</h2>
+      <form action="mailto:info@grelectromatics.com" method="POST" enctype="text/plain">
+        <input type="email" placeholder="Enter your email" name="email">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Floating Chat Icon -->
+  <div class="chat-icon" id="chatToggle">
+    <i class="fas fa-comment-alt"></i>
+  </div>
+
+  <!-- Chat Modal -->
+  <div id="chatModal" class="chat-modal">
+    <div class="chat-box">
+      <span id="closeChat" class="close-btn">&times;</span>
+      <h3>Live Chat</h3>
+      <form action="mailto:info@grelectromatics.com" method="POST" enctype="text/plain">
+        <textarea placeholder="Type your message..." name="message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
