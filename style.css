@@ -20,12 +20,11 @@ body {
   z-index: 1000;
 }
 
-.brand { display: inline-flex; align-items: center; text-decoration: none; }
-.logo {
-  height: 72px;              /* Visible size on desktop */
-  width: auto;
-  max-height: 84px;
-  object-fit: contain;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
 }
 
 /* Hamburger */
@@ -159,8 +158,10 @@ body {
 
 /* Mobile tweaks */
 @media (max-width: 900px){
-  .logo{ height: 56px; max-height: 64px; } /* still clearly visible on phones */
-
+  .logo{
+    height: 64px;        /* still clearly visible on phones */
+    max-height: 70px;
+  }
   .hamburger{ display: inline-block; }
   .nav-menu{
     position: absolute; top: 100%; right: 0; left: 0;
