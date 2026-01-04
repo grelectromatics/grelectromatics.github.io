@@ -9,11 +9,9 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<head>
-  <meta charset="UTF-8">
-  <title>GR Electromatics</title>
 
   <style>
+    /* NAVBAR STYLES */
     nav {
       display: flex;
       justify-content: space-between;
@@ -24,33 +22,89 @@
       top: 0;
       z-index: 100;
     }
-
     nav .brand a {
       color: #fff;
       font-size: 24px;
       font-weight: bold;
       text-decoration: none;
     }
-
     nav .nav-links {
       list-style: none;
       display: flex;
       gap: 20px;
     }
-
     nav .nav-links li a {
       color: #fff;
       text-decoration: none;
       font-size: 16px;
     }
-
     nav .nav-links li a:hover {
       text-decoration: underline;
+    }
+
+    /* CART DRAWER STYLES */
+    .cart-drawer {
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 300px;
+      height: 100%;
+      background: #f5f5f5;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+      padding: 20px;
+      display: none;
+      flex-direction: column;
+    }
+    .cart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cart-footer {
+      margin-top: auto;
+    }
+    .cart-item {
+      margin-bottom: 10px;
+    }
+    .cart-footer p {
+      font-weight: bold;
+    }
+
+    /* PRODUCT CARD */
+    .product-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .product-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 200px;
+      text-align: center;
+    }
+    .product-card input.quantity {
+      width: 50px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 
 <body>
+
+<!-- NAVBAR -->
+<header>
+  <nav>
+    <div class="brand">
+      <a href="index.html">G.R Electromatics & Chemicals</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#" id="cartLink">🛒 Cart (<span id="cartBadge">0</span>)</a></li>
+    </ul>
+  </nav>
+</header>
 
 <!-- CART DRAWER -->
 <div id="cartDrawer" class="cart-drawer">
@@ -58,47 +112,14 @@
     <h3>Your Cart</h3>
     <button id="closeCart">✕</button>
   </div>
-
   <div id="cartItems"></div>
-
   <div class="cart-footer">
     <p>Total: Rs <span id="cartTotal">0</span></p>
     <a href="checkout.html" class="checkout-btn">Checkout</a>
   </div>
 </div>
 
-<!-- TOP NAV -->
-<header class="top-bar">
-  <a class="brand" href="index.html">
-    <img src="images/your-logo-url.png" class="logo" alt="G.R Electromatics Logo">
-  </a>
-
-  <button class="hamburger" id="hamburger">
-    <span></span><span></span><span></span>
-  </button>
-
-  <nav class="nav-menu" id="navMenu">
-    <a href="#" id="cartLink" class="cart-link">
-      🛒
-      <span id="cartBadge" class="cart-badge">0</span>
-    </a>
-    <a class="nav-btn" href="index.html">Home</a>
-    <a class="nav-btn" href="shop.html">Shop</a>
-    <a class="nav-btn" href="#about">About</a>
-  <div class="brand">
-    <a href="index.html">GR Electromatics & Chemicals</a>
-  </div>
-  <ul class="nav-links">
-    <li><a href="shop.html">Shop</a></li>
-    <li><a href="product-mppt.html">MPPT</a></li>
-    <li><a href="product-solar-charger.html">Solar Inverter</a></li>
-    <li><a href="checkout.html">Checkout</a></li>
-  </ul>
-  </nav>
-
-</header>
-
-<!-- HERO -->
+<!-- HERO SECTION -->
 <section class="intro">
   <div class="intro-content">
     <h1>Power. Precision. Reliability.</h1>
@@ -110,7 +131,6 @@
 <!-- FEATURED PRODUCTS -->
 <section class="catalogue">
   <h2>Featured Products</h2>
-
   <div class="product-grid">
 
     <!-- Product 1 -->
@@ -118,7 +138,8 @@
       <img src="images/mppt.jpeg" alt="MPPT Solar Charger">
       <h3>MPPT Solar Charger</h3>
       <p>Maximum solar efficiency with intelligent control.</p>
-      <button class="add-to-cart" data-id="p1" data-name="MPPT Solar Charger" data-price="11,500">
+      <input type="number" min="1" value="1" class="quantity">
+      <button class="add-to-cart" data-id="p1" data-name="MPPT Solar Charger" data-price="11500">
         Add to Cart
       </button>
     </div>
@@ -126,116 +147,7 @@
     <!-- Product 2 -->
     <div class="product-card">
       <img src="images/kjkj.png" alt="Sinewave Inverter">
-      <h3>Sinewave Inverter</h3>
+      <h3>Sinewave Inverter - 7kVA</h3>
       <p>Safe, stable & smart battery charging.</p>
-      <button class="add-to-cart" data-id="p2" data-name="Sinewave Inverter - 7kVA" data-price="24,000">
-        Add to Cart
-      </button>
-    </div>
-
-    <!-- Add more products here as needed -->
-    
-  </div>
-</section>
-
-<script>
-const cart = {}; // store cart items
-
-const cartItemsDiv = document.getElementById("cartItems");
-const cartTotalSpan = document.getElementById("cartTotal");
-
-document.querySelectorAll(".add-to-cart").forEach(button => {
-  button.addEventListener("click", (e) => {
-    const productDiv = e.target.closest(".product");
-    const name = productDiv.dataset.name;
-    const price = parseFloat(productDiv.dataset.price);
-    const quantity = parseInt(productDiv.querySelector(".quantity").value);
-
-    if (cart[name]) {
-      cart[name].quantity += quantity;
-    } else {
-      cart[name] = { price: price, quantity: quantity };
-    }
-
-    updateCartUI();
-  });
-});
-
-function updateCartUI() {
-  cartItemsDiv.innerHTML = ""; // clear previous
-  let total = 0;
-
-  for (const [name, item] of Object.entries(cart)) {
-    const itemTotal = item.price * item.quantity;
-    total += itemTotal;
-
-    const cartItem = document.createElement("div");
-    cartItem.className = "cart-item";
-    cartItem.innerHTML = `<p>${name} x ${item.quantity} = Rs ${itemTotal}</p>`;
-    cartItemsDiv.appendChild(cartItem);
-  }
-
-  cartTotalSpan.textContent = total;
-}
-</script>
-
-<body>
-  <!-- Your other page content -->
-
-  <div class="product" data-name="MPPT Solar Controller" data-price="15000">
-    <h4>MPPT Solar Controller</h4>
-    <p>Price: Rs 15,000</p>
-    <input type="number" min="1" value="1" class="quantity">
-    <button class="add-to-cart">Add to Cart</button>
-  </div>
-
-  <div class="product" data-name="Solar Charger" data-price="12000">
-    <h4>Solar Charger</h4>
-    <p>Price: Rs 12,000</p>
-    <input type="number" min="1" value="1" class="quantity">
-    <button class="add-to-cart">Add to Cart</button>
-  </div>
-
-  <!-- Cart drawer HTML stays here -->
-  <div id="cartDrawer" class="cart-drawer">
-    <div class="cart-header">
-      <h3>Your Cart</h3>
-      <button id="closeCart">✕</button>
-    </div>
-    <div id="cartItems"></div>
-    <div class="cart-footer">
-      <p>Total: Rs <span id="cartTotal">0</span></p>
-      <a href="checkout.html" class="checkout-btn">Checkout</a>
-    </div>
-  </div>
-</body>
-
-<!-- ABOUT -->
-<section id="about" class="about">
-  <h2>Designed for Performance</h2>
-  <p>
-    G.R ELECTROMATICS builds premium power electronics with a focus on durability,
-    efficiency, and clean energy solutions.
-  </p>
-</section>
-
-<!-- FOOTER -->
-<footer class="contact">
-  <div class="contact-left">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:info@grelectromatics.com">info@grelectromatics.com</a></p>
-    <p>Phone: <a href="tel:+923204993030">+92 320 4993030</a></p>
-  </div>
-  <div class="contact-right">
-    <h2>Follow Us</h2>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
-  </div>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
+      <input type="number" min="1" value="1" class="quantity">
+      <bu
