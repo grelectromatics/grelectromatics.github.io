@@ -60,7 +60,9 @@ body {
 /* Hero */
 .intro {
   height: 100vh;
-  background: url('solar.jpg') center/cover no-repeat;
+  .intro {
+  background: url('images/solar.jpg') center/cover no-repeat;
+}
   display: grid; place-items: center;
   color: #fff; text-align: center; position: relative;
   padding-top: 80px; /* room for fixed nav, smaller */
