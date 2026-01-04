@@ -11,6 +11,9 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
+<body>
+
+<!-- CART DRAWER -->
 <div id="cartDrawer" class="cart-drawer">
   <div class="cart-header">
     <h3>Your Cart</h3>
@@ -25,11 +28,10 @@
   </div>
 </div>
 
-<body>
-
+<!-- TOP NAV -->
 <header class="top-bar">
   <a class="brand" href="index.html">
-    <img src="images/your-logo-url.png" class="logo">
+    <img src="images/your-logo-url.png" class="logo" alt="G.R Electromatics Logo">
   </a>
 
   <button class="hamburger" id="hamburger">
@@ -38,9 +40,9 @@
 
   <nav class="nav-menu" id="navMenu">
     <a href="#" id="cartLink" class="cart-link">
-  🛒
-  <span id="cartBadge" class="cart-badge">0</span>
-</a>
+      🛒
+      <span id="cartBadge" class="cart-badge">0</span>
+    </a>
     <a class="nav-btn" href="index.html">Home</a>
     <a class="nav-btn" href="shop.html">Shop</a>
     <a class="nav-btn" href="#about">About</a>
@@ -56,27 +58,38 @@
   </div>
 </section>
 
-<!-- FEATURED -->
+<!-- FEATURED PRODUCTS -->
 <section class="catalogue">
   <h2>Featured Products</h2>
 
   <div class="product-grid">
 
-    <a href="product-mppt.html" class="product-card">
-      <img src="images/mppt.jpeg">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="images/mppt.jpeg" alt="MPPT Solar Charger">
       <h3>MPPT Solar Charger</h3>
       <p>Maximum solar efficiency with intelligent control.</p>
-    </a>
+      <button class="add-to-cart" data-id="p1" data-name="MPPT Solar Charger" data-price="4500">
+        Add to Cart
+      </button>
+    </div>
 
-    <a href="product-solar-charger.html" class="product-card">
-      <img src="images/kjkj.png">
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="images/kjkj.png" alt="Solar Charger Controller">
       <h3>Solar Charger Controller</h3>
       <p>Safe, stable & smart battery charging.</p>
-    </a>
+      <button class="add-to-cart" data-id="p2" data-name="Solar Charger Controller" data-price="3200">
+        Add to Cart
+      </button>
+    </div>
 
+    <!-- Add more products here as needed -->
+    
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="about">
   <h2>Designed for Performance</h2>
   <p>
@@ -84,6 +97,23 @@
     efficiency, and clean energy solutions.
   </p>
 </section>
+
+<!-- FOOTER -->
+<footer class="contact">
+  <div class="contact-left">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:info@grelectromatics.com">info@grelectromatics.com</a></p>
+    <p>Phone: <a href="tel:+923001234567">+92 300 1234567</a></p>
+  </div>
+  <div class="contact-right">
+    <h2>Follow Us</h2>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
 
 <script src="script.js"></script>
 </body>
