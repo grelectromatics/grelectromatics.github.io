@@ -2,30 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MPPT Solar Charger | G.R ELECTROMATICS</title>
+  <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
+<!-- Top Navigation -->
 <header class="top-bar">
-  <a class="brand" href="shop.html">← Back to Shop</a>
+  <a class="brand" href="shop.html"><i class="fa-solid fa-arrow-left"></i> Back to Shop</a>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <nav class="nav-menu" id="navMenu">
+    <a class="nav-btn" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a class="nav-btn" href="shop.html"><i class="fa-solid fa-store"></i> Shop</a>
+    <a class="nav-btn" href="#about"><i class="fa-solid fa-circle-info"></i> About</a>
+    <a href="#" id="cartLink" class="cart-link">
+      🛒 <span id="cartBadge" class="cart-badge">0</span>
+    </a>
+  </nav>
 </header>
 
+<!-- Product Detail -->
 <section class="product-detail" style="padding-top:120px;">
-
   <div class="product-image">
-    <img src="images/mppt.jpeg">
+    <img src="images/mppt.jpeg" alt="MPPT Solar Charger">
   </div>
 
   <div class="product-info">
     <h1>MPPT Solar Charger Controller</h1>
-    <p class="price">PKR 11,500 80 AMP</p>
-
-    <p>
-      High-efficiency MPPT controller engineered to extract maximum solar power
-      while protecting your battery system.
-    </p>
-
+    <p class="price">PKR 11,500 - 80 AMP</p>
+    <p>High-efficiency MPPT controller engineered to extract maximum solar power while protecting your battery system.</p>
     <ul>
       <li>MPPT Technology</li>
       <li>12V / 24V Auto Detection</li>
@@ -33,17 +42,55 @@
       <li>Advanced Protection Systems</li>
     </ul>
 
-    <button
-  class="add-to-cart"
-  data-id="p1"
-  data-name="Smart Switch"
-  data-price="4500">
-  Add to Cart
-</button>
-
+    <button class="add-to-cart"
+      data-id="p1"
+      data-name="MPPT Solar Charger Controller"
+      data-price="11500">
+      Add to Cart
+    </button>
   </div>
-
 </section>
 
+<!-- Contact & Footer -->
+<footer class="contact fade-target">
+  <div class="contact-left">
+    <h2>Get in Touch</h2>
+    <p>Phone: +92 320 4993030</p>
+    <p>Email: <a href="mailto:info@grelectromatics.com">info@grelectromatics.com</a></p>
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Cart Drawer -->
+<div id="cartDrawer" class="cart-drawer">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button id="closeCart">✕</button>
+  </div>
+  <div id="cartItems"></div>
+  <div class="cart-footer">
+    <p>Total: Rs <span id="cartTotal">0</span></p>
+    <a href="checkout.html" class="checkout-btn">Checkout</a>
+  </div>
+</div>
+
+<!-- Floating Chat -->
+<button class="chat-icon" id="chatIcon"><i class="fa-solid fa-comments"></i></button>
+<div id="chatModal" class="chat-modal">
+  <button class="close-btn" id="closeChat">&times;</button>
+  <h3>Live Chat</h3>
+  <form id="chatForm">
+    <textarea id="chatMessage" placeholder="Type your message..." required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<!-- Scroll-to-Top -->
+<button id="scrollTopBtn" title="Go to top">↑</button>
+
+<script src="script.js"></script>
 </body>
 </html>

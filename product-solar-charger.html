@@ -4,82 +4,101 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Solar Charger Controller | G.R ELECTROMATICS</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        referrerpolicy="no-referrer" />
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- Top Navigation -->
-  <header class="top-bar">
-    <a class="brand" href="index.html">
-      <img src="your-logo-url.png" alt="G.R ELECTROMATICS Logo" class="logo">
+<!-- Top Navigation -->
+<header class="top-bar">
+  <a class="brand" href="shop.html"><i class="fa-solid fa-arrow-left"></i> Back to Shop</a>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <nav class="nav-menu" id="navMenu">
+    <a class="nav-btn" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a class="nav-btn" href="shop.html"><i class="fa-solid fa-store"></i> Shop</a>
+    <a class="nav-btn" href="#about"><i class="fa-solid fa-circle-info"></i> About</a>
+    <a href="#" id="cartLink" class="cart-link">
+      🛒 <span id="cartBadge" class="cart-badge">0</span>
     </a>
-    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-    <nav class="nav-menu" id="navMenu">
-      <a class="nav-btn" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-      <a class="nav-btn" href="index.html#section2"><i class="fa-solid fa-store"></i> Shop</a>
-      <a class="nav-btn" href="index.html#section3"><i class="fa-solid fa-circle-info"></i> About</a>
-    </nav>
-  </header>
+  </nav>
+</header>
 
-  <!-- Product Hero Section -->
-  <section class="intro fade-target" style="padding-top:120px;">
-    <div class="intro-content">
-      <h1>Solar Charger Controller</h1>
-      <p>Optimize your solar setup with intelligent charging, battery protection, and real-time monitoring.</p>
-    </div>
-  </section>
-
-  <!-- Product Details Section -->
-  <section class="catalogue fade-target">
-    <h2>Specifications</h2>
-    <ul>
-      <li>MPPT-based charging</li>
-      <li>12V / 24V Auto Switching</li>
-      <li>LCD Display + Remote App Monitoring</li>
-      <li>Overload and short-circuit protection</li>
-    </ul>
-
-    <h2>Product Preview</h2>
-    <div class="product-grid">
-      <div class="product-card fade-target">
-        <img src="mppt.jpeg" alt="MPPT Solar Charger Controller">
-        <h3>MPPT Solar Charger Controller</h3>
-        <p>High-efficiency MPPT charging, designed for maximum solar energy utilization.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact & Footer -->
-  <footer class="contact fade-target">
-    <div class="contact-left">
-      <h2>Get in Touch</h2>
-      <p>Phone: +92 320 4993030</p>
-      <p>Email: <a href="mailto:info@grelectromatics.com">info@grelectromatics.com</a></p>
-      <div class="social-icons">
-        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Floating Chat -->
-  <button class="chat-icon" id="chatIcon" aria-label="Open chat"><i class="fa-solid fa-comments"></i></button>
-  <div id="chatModal" class="chat-modal" aria-hidden="true">
-    <button class="close-btn" id="closeChat" aria-label="Close chat">&times;</button>
-    <h3>Live Chat</h3>
-    <form id="chatForm">
-      <textarea id="chatMessage" placeholder="Type your message..." required></textarea>
-      <button type="submit">Send</button>
-    </form>
+<!-- Product Hero -->
+<section class="intro fade-target" style="padding-top:120px;">
+  <div class="intro-content">
+    <h1>Solar Charger Controller</h1>
+    <p>Optimize your solar setup with intelligent charging, battery protection, and real-time monitoring.</p>
   </div>
+</section>
 
-  <!-- Scroll-to-Top -->
-  <button id="scrollTopBtn" title="Go to top">↑</button>
+<!-- Product Details -->
+<section class="catalogue fade-target">
+  <h2>Specifications</h2>
+  <ul>
+    <li>MPPT-based charging</li>
+    <li>12V / 24V Auto Switching</li>
+    <li>LCD Display + Remote App Monitoring</li>
+    <li>Overload and short-circuit protection</li>
+  </ul>
 
-  <script src="script.js"></script>
+  <h2>Product Preview</h2>
+  <div class="product-grid">
+    <div class="product-card fade-target">
+      <img src="images/kjkj.png" alt="Solar Charger Controller">
+      <h3>Solar Charger Controller</h3>
+      <p>Safe, stable & smart battery charging for solar setups.</p>
+      <button class="add-to-cart"
+        data-id="p2"
+        data-name="Solar Charger Controller"
+        data-price="4500">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Contact & Footer -->
+<footer class="contact fade-target">
+  <div class="contact-left">
+    <h2>Get in Touch</h2>
+    <p>Phone: +92 320 4993030</p>
+    <p>Email: <a href="mailto:info@grelectromatics.com">info@grelectromatics.com</a></p>
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Cart Drawer -->
+<div id="cartDrawer" class="cart-drawer">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button id="closeCart">✕</button>
+  </div>
+  <div id="cartItems"></div>
+  <div class="cart-footer">
+    <p>Total: Rs <span id="cartTotal">0</span></p>
+    <a href="checkout.html" class="checkout-btn">Checkout</a>
+  </div>
+</div>
+
+<!-- Floating Chat -->
+<button class="chat-icon" id="chatIcon"><i class="fa-solid fa-comments"></i></button>
+<div id="chatModal" class="chat-modal">
+  <button class="close-btn" id="closeChat">&times;</button>
+  <h3>Live Chat</h3>
+  <form id="chatForm">
+    <textarea id="chatMessage" placeholder="Type your message..." required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<!-- Scroll-to-Top -->
+<button id="scrollTopBtn" title="Go to top">↑</button>
+
+<script src="script.js"></script>
 </body>
 </html>
