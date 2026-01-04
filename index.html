@@ -10,6 +10,21 @@
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
+<div id="cartDrawer" class="cart-drawer">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button id="closeCart">✕</button>
+  </div>
+
+  <div id="cartItems"></div>
+
+  <div class="cart-footer">
+    <p>Total: Rs <span id="cartTotal">0</span></p>
+    <a href="checkout.html" class="checkout-btn">Checkout</a>
+  </div>
+</div>
+
 <body>
 
 <header class="top-bar">
@@ -22,6 +37,10 @@
   </button>
 
   <nav class="nav-menu" id="navMenu">
+    <a href="#" id="cartLink" class="cart-link">
+  🛒
+  <span id="cartBadge" class="cart-badge">0</span>
+</a>
     <a class="nav-btn" href="index.html">Home</a>
     <a class="nav-btn" href="shop.html">Shop</a>
     <a class="nav-btn" href="#about">About</a>
