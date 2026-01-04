@@ -59,15 +59,32 @@ function saveCart(cart) {
 }
 
 function addToCart(product) {
-  const cart = getCart();
+  const cart = JSON.parse(localStorage.getItem('gr_cart')) || [];
   const existing = cart.find(item => item.id === product.id);
+
   if (existing) {
-    existing.qty += 1;
+    existing.qty += product.qty;
   } else {
-    cart.push({ ...product, qty: 1 });
+    cart.push(product);
   }
-  saveCart(cart);
+
+  localStorage.setItem('gr_cart', JSON.stringify(cart));
+  renderCartDrawer();
+  updateCartBadge();
 }
+
+document.querySelectorAll('.add-to-cart').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const productDiv = btn.closest('.product-card');
+    const qty = parseInt(productDiv.querySelector('.quantity').value) || 1;
+    addToCart({
+      id: btn.dataset.id,
+      name: btn.dataset.name,
+      price: Number(btn.dataset.price),
+      qty: qty
+    });
+  });
+});
 
 function removeFromCart(id) {
   const cart = getCart().filter(item => item.id !== id);
@@ -104,32 +121,24 @@ closeCartBtn?.addEventListener('click', () => {
 
 /* ========= RENDER CART ========= */
 function renderCartDrawer() {
-  const box = document.getElementById('cartItems');
-  const totalEl = document.getElementById('cartTotal');
-  if (!box || !totalEl) return;
+  const cartItemsDiv = document.getElementById('cartItems');
+  const cartTotalSpan = document.getElementById('cartTotal');
+  const cart = JSON.parse(localStorage.getItem('gr_cart')) || [];
 
-  const cart = getCart();
-  box.innerHTML = '';
   let total = 0;
+  cartItemsDiv.innerHTML = '';
 
   cart.forEach(item => {
-    total += item.price * item.qty;
+    const itemTotal = item.price * item.qty;
+    total += itemTotal;
 
-    const itemDiv = document.createElement('div');
-    itemDiv.className = 'cart-item';
-    itemDiv.innerHTML = `
-      <div>
-        <strong>${item.name}</strong><br>
-        Rs ${item.price} × 
-        <input type="number" min="1" value="${item.qty}" 
-               onchange="updateQty('${item.id}', this.value)">
-      </div>
-      <button onclick="removeFromCart('${item.id}')">🗑</button>
-    `;
-    box.appendChild(itemDiv);
+    const div = document.createElement('div');
+    div.className = 'cart-item';
+    div.innerHTML = `<p>${item.name} × ${item.qty} = Rs ${itemTotal}</p>`;
+    cartItemsDiv.appendChild(div);
   });
 
-  totalEl.textContent = total;
+  cartTotalSpan.textContent = total;
 }
 
 /* ========= INITIALIZE CART BUTTONS ========= */
