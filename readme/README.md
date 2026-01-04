@@ -1,16 +1,13 @@
-## Hi there 👋
+# Grelectromatics Website
 
-<!--
-**grelectromatics/grelectromatics** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+This is the GitHub repository for the Grelectromatics website.
 
-Here are some ideas to get you started:
+## Pages
+- Home: index.html
+- Shop: shop.html
+- MPPT Product: product-mppt.html
+- Solar Charger: product-solar-charger.html
+- Checkout: checkout.html
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## How to view
+You can view the website live at: [https://grelectromatics.github.io/grelectromatics/](https://grelectromatics.github.io/grelectromatics/)
