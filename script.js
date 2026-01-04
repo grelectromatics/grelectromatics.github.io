@@ -215,7 +215,7 @@ topBtn?.addEventListener('click', () =>
   window.scrollTo({ top: 0, behavior: 'smooth' })
 );
 
-/* ========= Add to cart (TEMP) ========= */
+/* ========= Add to cart ========= */
 document.querySelectorAll('.add-to-cart').forEach(btn => {
   btn.addEventListener('click', () => {
     addToCart({
@@ -225,3 +225,8 @@ document.querySelectorAll('.add-to-cart').forEach(btn => {
     });
   });
 });
+
+/* ========= Initial cart render ========= */
+updateCartBadge();
+renderCartDrawer();
+renderCheckout();
