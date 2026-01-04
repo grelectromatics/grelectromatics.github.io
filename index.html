@@ -1,130 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>G.R ELECTROMATICS</title>
 
-  <!-- Favicon (keep favicon.ico in the repo root) -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Icons (Font Awesome) -->
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        referrerpolicy="no-referrer" />
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- Top Navigation -->
-  <header class="top-bar">
+<header class="top-bar">
   <a class="brand" href="index.html">
     <img src="images/your-logo-url.png" class="logo">
   </a>
+
+  <button class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="nav-menu" id="navMenu">
+    <a class="nav-btn" href="index.html">Home</a>
+    <a class="nav-btn" href="shop.html">Shop</a>
+    <a class="nav-btn" href="#about">About</a>
+  </nav>
 </header>
 
-<section class="product-detail" style="padding-top:120px;">
+<!-- HERO -->
+<section class="intro">
+  <div class="intro-content">
+    <h1>Power. Precision. Reliability.</h1>
+    <p>High-performance solar & power electronics engineered for real-world use.</p>
+    <a href="shop.html" class="cta-btn">Shop Products</a>
+  </div>
+</section>
 
-    <!-- Hamburger (mobile) -->
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="nav-menu" id="navMenu">
-      <a class="nav-btn" href="./"><i class="fa-solid fa-house"></i> <span>Home</span></a>
-      <a class="nav-btn" href="#section2"><i class="fa-solid fa-store"></i> <span>Shop</span></a>
-      <a class="nav-btn" href="#section3"><i class="fa-solid fa-circle-info"></i> <span>About</span></a>
-      <a class="nav-btn cart-link" href="#section2" id="cartLink" title="Cart">
-        <i class="fa-solid fa-cart-shopping"></i>
-      </a>
-    </nav>
-  </header>
-
-  <!-- Section 1: Hero -->
-  <section id="section1" class="intro fade-target">
-    <div class="intro-content">
-      <h1 id="typing">Welcome to G.R ELECTROMATICS</h1>
-      <p>Your one-stop solution for advanced electronics and smart energy.</p>
-      <a href="#section2" class="cta-btn">Explore Now</a>
-    </div>
-  </section>
-
-  <!-- Section 2: Catalogue -->
-  <section id="section2" class="catalogue fade-target">
-  <h2>Product Catalogue</h2>
+<!-- FEATURED -->
+<section class="catalogue">
+  <h2>Featured Products</h2>
 
   <div class="product-grid">
 
-    <a class="product-card fade-target" href="product-mppt.html">
-      <img src="images/mppt.jpeg" alt="MPPT Solar Charger">
+    <a href="product-mppt.html" class="product-card">
+      <img src="images/mppt.jpeg">
       <h3>MPPT Solar Charger</h3>
-      <p>High-efficiency MPPT charging.</p>
+      <p>Maximum solar efficiency with intelligent control.</p>
     </a>
 
-    <a class="product-card fade-target" href="product-solar-charger.html">
-      <img src="images/kjkj.png" alt="Solar Charger Controller">
+    <a href="product-solar-charger.html" class="product-card">
+      <img src="images/kjkj.png">
       <h3>Solar Charger Controller</h3>
-      <p>Reliable & intelligent charging.</p>
+      <p>Safe, stable & smart battery charging.</p>
     </a>
 
   </div>
 </section>
 
-  <!-- Section 3: About -->
-  <section id="section3" class="about fade-target">
-    <h2>About Us</h2>
-    <p>
-      We build reliable, high-end electronics with a focus on clean energy and durability.
-      From solar charge controllers to inverters, we design for real-world performance.
-    </p>
-  </section>
+<section id="about" class="about">
+  <h2>Designed for Performance</h2>
+  <p>
+    G.R ELECTROMATICS builds premium power electronics with a focus on durability,
+    efficiency, and clean energy solutions.
+  </p>
+</section>
 
-  <!-- Section 4: Contact & Newsletter -->
-  <section id="section4" class="contact fade-target">
-    <div class="contact-left">
-      <h2>Get in Touch</h2>
-      <p><strong>Phone:</strong> +92 320 4993030</p>
-      <p><strong>Email:</strong> <a href="mailto:info@grelectromatics.com">info@grelectromatics.com</a></p>
-      <div class="social-icons">
-        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      </div>
-    </div>
-
-    <div class="contact-right">
-      <h2>Subscribe to Our Newsletter</h2>
-      <form action="mailto:info@grelectromatics.com" method="post" enctype="text/plain" class="newsletter-form">
-        <input type="email" name="email" placeholder="Enter your email" required />
-        <button type="submit">Subscribe</button>
-      </form>
-      <small>Submitting opens your email app to send us your request.</small>
-    </div>
-  </section>
-
-  <!-- Floating Chat Button -->
-  <button class="chat-icon" id="chatIcon" aria-label="Open chat">
-    <i class="fa-solid fa-comments"></i>
-  </button>
-
-  <!-- Chat Modal -->
-  <div id="chatModal" class="chat-modal" aria-hidden="true">
-    <button class="close-btn" id="closeChat" aria-label="Close chat">&times;</button>
-    <h3>Live Chat</h3>
-    <form id="chatForm">
-      <textarea id="chatMessage" placeholder="Type your message..." required></textarea>
-      <button type="submit">Send</button>
-    </form>
-    <small>Messages are sent via email to us.</small>
-  </div>
-
-  <!-- Scroll-To-Top -->
-  <button id="scrollTopBtn" title="Go to top">↑</button>
-
-  <!-- Scripts -->
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-
-
