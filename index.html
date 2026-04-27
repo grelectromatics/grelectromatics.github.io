@@ -1,229 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>GR Electromatics & Chemicals</title>
+<title>GR Electromatics Store</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Advanced MPPT solar chargers and power electronics in Pakistan. High efficiency, durability, and smart energy solutions.">
-  <meta name="keywords" content="MPPT, solar charger, inverter, solar Pakistan, power electronics">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.ico">
 
-  <link rel="stylesheet" href="style.css?v=3">
-  <link rel="icon" href="favicon.ico">
-
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- AdSense -->
-  <script async 
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4579384217678930"
-    crossorigin="anonymous"></script>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-  <!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
-
-<script>
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-};
-
-firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
-</script>
-  
 <body>
 
-<!-- NAV -->
-<header class="top-bar">
-  <a class="brand" href="#">
-    <img src="images/your-logo-url.png" class="logo">
-    <span style="font-weight:700;font-size:20px;">GR Electromatics</span>
-  </a>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">GR Electromatics</div>
 
-  <button class="hamburger" id="hamburger">
-    <span></span><span></span><span></span>
-  </button>
-
-  <nav class="nav-menu" id="navMenu">
-    <a href="#" id="cartLink" class="cart-link">🛒 <span id="cartBadge">0</span></a>
-    <a class="nav-btn" href="#">Home</a>
-    <a class="nav-btn" href="#products">Products</a>
-    <a class="nav-btn" href="#about">About</a>
-    <a class="nav-btn" href="#blog">Blog</a>
-    
+  <nav id="nav">
+    <a href="#">Home</a>
+    <a href="#products">Products</a>
+    <a href="#categories">Categories</a>
+    <a href="#about">About</a>
+    <a href="#faq">FAQ</a>
+    <a href="#" id="cartBtn">🛒 <span id="cartCount">0</span></a>
   </nav>
-     <div id="authSection">
-  <button onclick="login()">Login with Google</button>
-  <button onclick="logout()">Logout</button>
-  <p id="userInfo"></p>
-</div>
-  
+
+  <div class="menu" id="menuBtn">☰</div>
 </header>
 
 <!-- HERO -->
-<section class="intro">
-  <div class="intro-content">
-    <h1 id="typing">Powering the Future with Solar Intelligence</h1>
-    <p>High-efficiency MPPT systems engineered for real-world performance.</p>
-    <a href="#products" class="cta-btn">Explore Products</a>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Next-Gen Solar Power Systems</h1>
+    <p>High-efficiency MPPT controllers, inverters & energy solutions built for real-world performance.</p>
+    <a href="#products" class="btn">Shop Now</a>
   </div>
-</section>
+</section> 
+<!-- TRUST STRIP -->
+<section class="trust">
+  <div>✔ Secure Checkout</div>
+  <div>✔ High Efficiency Tech</div>
+  <div>✔ Reliable Warranty</div>
+  <div>✔ Fast Support</div>
+</section> 
 
-<!-- AUTHORITY SECTION -->
-<section style="padding:80px;text-align:center;background:#111;color:white;">
-  <h2 style="font-size:2.5rem;">Built for Real Power Systems</h2>
-  <p style="max-width:700px;margin:auto;margin-top:15px;">
-    Our electronics are designed for maximum efficiency, stability, and durability,
-    ensuring consistent performance in demanding solar applications.
-  </p>
-</section>
+<!-- CATEGORIES -->
+<section id="categories" class="section">
+  <h2>Shop by Category</h2>
 
-<!-- STATS -->
-<section style="padding:60px;text-align:center;">
-  <div style="display:flex;justify-content:center;gap:60px;flex-wrap:wrap;">
-    <div><h2>95%</h2><p>Efficiency</p></div>
-    <div><h2>24/7</h2><p>Operation</p></div>
-    <div><h2>100+</h2><p>Units Built</p></div>
+  <div class="grid">
+    <div class="cat">Solar Controllers</div>
+    <div class="cat">Inverters</div>
+    <div class="cat">Battery Systems</div>
+    <div class="cat">Accessories</div>
   </div>
 </section>
 
 <!-- PRODUCTS -->
-<section id="products" class="catalogue fade-target">
+<section id="products" class="section">
   <h2>Featured Products</h2>
 
-  <div class="product-grid">
+  <div class="grid">
 
-    <div class="product-card">
+    <div class="card">
       <img src="images/mppt.jpeg">
       <h3>MPPT Solar Charger</h3>
-      <p>
-        ✔ Up to 30% more efficiency<br>
-        ✔ Smart MPPT tracking<br>
-        ✔ Battery life optimization
-      </p>
-      <input type="number" min="1" value="1" class="quantity">
-      <button class="add-to-cart" data-id="p1" data-name="MPPT Solar Charger" data-price="11500">
-        Add to Cart
-      </button>
+      <p>High efficiency smart tracking system.</p>
+      <span>Rs 11,500</span>
+      <button onclick="addToCart('MPPT Charger',11500)">Add</button>
     </div>
 
-    <div class="product-card">
+    <div class="card">
       <img src="images/kjkj.png">
-      <h3>7kVA Sinewave Inverter</h3>
-      <p>
-        ✔ Pure sinewave output<br>
-        ✔ Stable voltage control<br>
-        ✔ Safe for electronics
-      </p>
-      <input type="number" min="1" value="1" class="quantity">
-      <button class="add-to-cart" data-id="p2" data-name="Sinewave Inverter" data-price="24000">
-        Add to Cart
-      </button>
+      <h3>7kVA Inverter</h3>
+      <p>Pure sinewave stable output system.</p>
+      <span>Rs 24,000</span>
+      <button onclick="addToCart('Inverter',24000)">Add</button>
     </div>
 
   </div>
 </section>
 
-<!-- IMAGE BREAK -->
-<section style="padding:40px;text-align:center;">
-  <img src="images/solar.jpg" style="width:90%;max-width:900px;border-radius:12px;">
+<!-- BENEFITS -->
+<section class="benefits">
+  <h2>Why Choose Us?</h2>
+
+  <div class="grid">
+    <div>⚡ High Efficiency Design</div>
+    <div>🔋 Battery Protection Tech</div>
+    <div>🛠 Durable Industrial Build</div>
+    <div>🌞 Solar Optimized Systems</div>
+  </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="about fade-target">
+<section id="about" class="about">
   <h2>About Us</h2>
   <p>
-    GR Electromatics focuses on designing advanced power electronics with
-    reliability and performance at the core. Our mission is to provide
-    efficient solar solutions that make energy systems smarter and more sustainable.
+    GR Electromatics builds advanced power electronics focused on solar energy efficiency,
+    reliability, and long-term performance. We aim to make energy smarter and more accessible.
   </p>
 </section>
 
-<!-- BLOG -->
-<section id="blog" class="fade-target" style="padding:60px;text-align:center;">
-  <h2>Learn & Explore</h2>
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <h2>What Customers Say</h2>
 
-  <article>
-    <h3>What is MPPT?</h3>
-    <p>
-      MPPT (Maximum Power Point Tracking) technology dynamically adjusts voltage and current
-      to ensure solar panels operate at maximum efficiency under varying sunlight conditions.
-    </p>
-  </article>
+  <div class="grid">
+    <div class="review">“Best MPPT controller I’ve used.”</div>
+    <div class="review">“Stable inverter, no issues at all.”</div>
+    <div class="review">“High quality build, worth it.”</div>
+  </div>
+</section>
 
-  <article>
-    <h3>MPPT vs PWM Controllers</h3>
-    <p>
-      MPPT controllers are significantly more efficient than PWM controllers,
-      especially in low-light conditions, making them ideal for modern solar systems.
-    </p>
-  </article>
+<!-- BLOG PREVIEW -->
+<section class="blog">
+  <h2>Learn More</h2>
+
+  <div class="grid">
+    <div class="post">What is MPPT?</div>
+    <div class="post">MPPT vs PWM explained</div>
+    <div class="post">Best solar setups</div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <h2>Stay Updated</h2>
+  <input type="email" placeholder="Enter email">
+  <button>Subscribe</button>
 </section>
 
 <!-- CART -->
-<div id="cartDrawer" class="cart-drawer">
-  <div class="cart-header">
-    <h3>Your Cart</h3>
-    <button id="closeCart">✕</button>
-  </div>
+<div id="cartPanel" class="cart">
+  <h3>Your Cart</h3>
   <div id="cartItems"></div>
-  <div class="cart-footer">
-    <p>Total: Rs <span id="cartTotal">0</span></p>
-    <a href="checkout.html" class="checkout-btn">Checkout</a>
-  </div>
+  <p>Total: Rs <span id="total">0</span></p>
 </div>
 
 <!-- FOOTER -->
-<footer class="contact fade-target">
-  <div>
-    <h2>Contact</h2>
-    <p>Email: info@grelectromatics.com</p>
-    <p>Phone: +92 320 4993030</p>
-    <p><a href="privacy.html">Privacy Policy</a></p>
-  </div>
-
-  <div>
-    <h2>Social</h2>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
-  </div>
-
-  <div>
-    <h2>Trust</h2>
-    <p>✔ Secure Checkout</p>
-    <p>✔ High Quality Electronics</p>
-    <p>✔ Customer Support</p>
-  </div>
+<footer>
+  <p>© 2026 GR Electromatics</p>
 </footer>
 
-<!-- BUTTONS -->
-<button id="scrollTopBtn">↑</button>
-
-<div class="chat-icon" id="chatIcon">
-  <i class="fas fa-comment-alt"></i>
-</div>
-
-<div id="chatModal" class="chat-modal">
-  <div class="chat-header">
-    <h4>Chat</h4>
-    <button id="closeChat">✕</button>
-  </div>
-  <form id="chatForm">
-    <input id="chatMessage" placeholder="Type your message..." required>
-    <button type="submit">Send</button>
-  </form>
-</div>
-
 <script src="script.js"></script>
-
 </body>
 </html>
