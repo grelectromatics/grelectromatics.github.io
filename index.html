@@ -3,70 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>G.R ELECTROMATICS & CHEMICALS</title>
+
+  <title>GR Electromatics & Chemicals</title>
+
+  <!-- SEO -->
+  <meta name="description" content="High-performance MPPT solar chargers, inverters, and power electronics in Pakistan. Reliable and efficient energy solutions.">
+  <meta name="keywords" content="MPPT, solar charger, inverter, solar Pakistan, power electronics">
+  <meta name="author" content="GR Electromatics">
+
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
+
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4579384217678930"
-     crossorigin="anonymous"></script>
-  
-<a href="privacy.html">Privacy Policy</a>
-  
+
+  <!-- AdSense -->
+  <script async 
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4579384217678930"
+    crossorigin="anonymous">
+  </script>
 </head>
+
 <body>
 
-<!-- TOP NAV / BRAND -->
+<!-- NAVBAR -->
 <header class="top-bar">
   <a class="brand" href="index.html">
-    <img src="images/your-logo-url.png" class="logo" alt="G.R Electromatics Logo">
-   <span style="font-weight: 700; font-size: 22px;">GR Electromatics & Chemicals</span>
-
+    <img src="images/your-logo-url.png" class="logo" alt="Logo">
+    <span style="font-weight:700;font-size:22px;">GR Electromatics</span>
   </a>
 
-  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <button class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
 
   <nav class="nav-menu" id="navMenu">
     <a href="#" id="cartLink" class="cart-link">🛒 <span id="cartBadge" class="cart-badge">0</span></a>
     <a class="nav-btn" href="index.html">Home</a>
     <a class="nav-btn" href="shop.html">Shop</a>
     <a class="nav-btn" href="#about">About</a>
+    <a class="nav-btn" href="#blog">Blog</a>
   </nav>
 </header>
 
 <!-- HERO -->
 <section class="intro">
   <div class="intro-content">
-    <h1 id="typing">Power. Precision. Reliability.</h1>
-    <p>High-performance solar & power electronics engineered for real-world use.</p>
+    <h1 id="typing">Next-Gen Solar Power Solutions</h1>
+    <p>Engineered MPPT systems delivering maximum efficiency and reliability.</p>
     <a href="shop.html" class="cta-btn">Shop Products</a>
   </div>
 </section>
 
-<!-- FEATURED PRODUCTS -->
+<!-- PRODUCTS -->
 <section class="catalogue fade-target">
   <h2>Featured Products</h2>
+
   <div class="product-grid">
+
     <div class="product-card">
       <img src="images/mppt.jpeg" alt="MPPT Solar Charger">
       <h3>MPPT Solar Charger</h3>
-      <p>Maximum solar efficiency with intelligent control.</p>
+      <p>Maximizes solar efficiency with smart tracking.</p>
       <input type="number" min="1" value="1" class="quantity">
-      <button class="add-to-cart" data-id="p1" data-name="MPPT Solar Charger" data-price="11500">Add to Cart</button>
+      <button class="add-to-cart" data-id="p1" data-name="MPPT Solar Charger" data-price="11500">
+        Add to Cart
+      </button>
     </div>
 
     <div class="product-card">
       <img src="images/kjkj.png" alt="Sinewave Inverter">
       <h3>Sinewave Inverter - 7kVA</h3>
-      <p>Safe, stable & smart battery charging.</p>
+      <p>Stable, clean power for sensitive devices.</p>
       <input type="number" min="1" value="1" class="quantity">
-      <button class="add-to-cart" data-id="p2" data-name="Sinewave Inverter" data-price="24000">Add to Cart</button>
+      <button class="add-to-cart" data-id="p2" data-name="Sinewave Inverter" data-price="24000">
+        Add to Cart
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- INFO SECTION -->
+<section class="fade-target" style="padding:60px;text-align:center;">
+  <h2>Why Choose Us?</h2>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:20px;">
+    <div>
+      <h3>⚡ High Efficiency</h3>
+      <p>Optimized MPPT technology ensures maximum solar output.</p>
+    </div>
+    <div>
+      <h3>🔋 Battery Protection</h3>
+      <p>Advanced charging extends battery lifespan.</p>
+    </div>
+    <div>
+      <h3>🛠 Durable Build</h3>
+      <p>Designed for real-world harsh environments.</p>
     </div>
   </div>
 </section>
 
-<!-- CART DRAWER -->
+<!-- BLOG -->
+<section id="blog" class="fade-target" style="padding:60px;text-align:center;">
+  <h2>Learn & Explore</h2>
+
+  <article>
+    <h3>What is MPPT?</h3>
+    <p>
+      MPPT (Maximum Power Point Tracking) ensures solar panels operate at peak efficiency by dynamically adjusting voltage and current.
+    </p>
+  </article>
+
+  <article>
+    <h3>MPPT vs PWM</h3>
+    <p>
+      MPPT controllers outperform PWM by extracting more power, especially in low sunlight conditions.
+    </p>
+  </article>
+</section>
+
+<!-- CART -->
 <div id="cartDrawer" class="cart-drawer">
   <div class="cart-header">
     <h3>Your Cart</h3>
@@ -81,46 +138,57 @@
 
 <!-- ABOUT -->
 <section id="about" class="about fade-target">
-  <h2>Designed for Performance</h2>
+  <h2>About Us</h2>
   <p>
-    G.R ELECTROMATICS builds premium power electronics with a focus on durability,
-    efficiency, and clean energy solutions.
+    GR Electromatics builds high-performance power electronics focused on efficiency,
+    durability, and clean energy innovation.
   </p>
 </section>
 
-<!-- CONTACT -->
+<!-- FOOTER -->
 <footer class="contact fade-target">
-  <div class="contact-left">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:info@grelectromatics.com">info@grelectromatics.com</a></p>
-    <p>Phone: <a href="tel:+923204993030">+92 320 4993030</a></p>
+  <div>
+    <h2>Contact</h2>
+    <p>Email: info@grelectromatics.com</p>
+    <p>Phone: +92 320 4993030</p>
+    <p><a href="privacy.html">Privacy Policy</a></p>
   </div>
-  <div class="contact-right">
-    <h2>Follow Us</h2>
+
+  <div>
+    <h2>Follow</h2>
     <div class="social-icons">
       <a href="#"><i class="fab fa-facebook"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-linkedin"></i></a>
     </div>
   </div>
+
+  <div>
+    <h2>Trust</h2>
+    <p>✔ Secure Checkout</p>
+    <p>✔ Reliable Electronics</p>
+    <p>✔ Customer Support</p>
+  </div>
 </footer>
 
-<!-- SCROLL TO TOP BUTTON -->
+<!-- SCROLL TOP -->
 <button id="scrollTopBtn">↑</button>
 
-<!-- FLOATING CHAT -->
+<!-- CHAT -->
 <div class="chat-icon" id="chatIcon"><i class="fas fa-comment-alt"></i></div>
+
 <div id="chatModal" class="chat-modal">
   <div class="chat-header">
-    <h4>Chat with us</h4>
+    <h4>Chat</h4>
     <button id="closeChat">✕</button>
   </div>
   <form id="chatForm">
-    <input id="chatMessage" placeholder="Type your message..." required>
+    <input id="chatMessage" placeholder="Type message..." required>
     <button type="submit">Send</button>
   </form>
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
