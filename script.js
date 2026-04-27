@@ -111,6 +111,23 @@ if(typing){
   type();
 }
 
+function login(){
+  const provider = new firebase.auth.GoogleAuthProvider();
+  auth.signInWithPopup(provider);
+}
+
+function logout(){
+  auth.signOut();
+}
+
+auth.onAuthStateChanged(user => {
+  if(user){
+    document.getElementById("userInfo").innerText = "Logged in as " + user.email;
+  } else {
+    document.getElementById("userInfo").innerText = "Not logged in";
+  }
+});
+
 /* FADE IN */
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
